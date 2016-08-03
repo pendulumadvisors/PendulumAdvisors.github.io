@@ -1,0 +1,233 @@
+/*-- Research Page --*/
+.wall-background {
+	background: url(/images/wall.jpg) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+}
+.bookshelf {
+	background: url(/images/research.jpg) no-repeat center center;
+	background-size: contain;
+	text-align: center;
+	margin: 0px auto;
+	height: 100vh;
+	width: 430px;
+	position: relative;
+}
+.wall-background a {
+	font-size: 30px;
+	font-family: "Avenir Next";
+	font-weight: 100;
+	color: white;
+	text-decoration: none;
+}
+.bookshelfRow1 {
+	padding-top: 5%;
+}
+.shelf1 {
+	padding-top: 5%;
+	width: 41%;
+	height: 22%;
+	margin-left: 20px;
+	position: absolute;
+	opacity: 0;
+	border: 1px solid white;
+	transition: all 0.3s ease-in-out;
+}
+.shelf1:hover {
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.7);
+}
+.shelf2 {
+	padding-top: 5%;
+	width: 41%;
+	height: 22%;
+	margin-left: 240px;
+	position: absolute;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	border: 1px solid white;
+}
+.shelf2:hover {
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.7);
+}
+.bookshelfRow2 {
+	padding-top: 35%;
+}
+.shelf3 {
+	padding-top: 10%;
+	width: 41%;
+	height: 22%;
+	margin-left: 20px;
+	position: absolute;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	border: 1px solid white;
+}
+.shelf3:hover {
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.7);
+}
+.shelf4and5 {
+	padding-top: 10%;
+	width: 41%;
+	height: 45%;
+	margin-left: 240px;
+	position: absolute;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	border: 1px solid white;
+}
+.shelf4and5:hover {
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.7);
+}
+.bookshelfRow3 {
+	padding-top: 35%;
+}
+.shelf6 {
+	padding-top: 5%;
+	width: 41%;
+	height: 22%;
+	margin-left: 20px;
+	position: absolute;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	border: 1px solid white;
+}
+.shelf6:hover {
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.7);
+}
+.lastshelf {
+	padding-top: 5%;
+	margin-top: 35%;
+	width: 88%;
+	height: 20%;
+	margin-left: 20px;
+	position: absolute;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	border: 1px solid white;
+}
+.lastshelf:hover {
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.7);
+}
+.return a {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	width: 250px;
+}
+@media (max-width: 968px) {
+	.return a {
+		font-size: 20px;
+		left: 5px;
+		width: 100px;
+	}
+}
+
+/*-- Internal Research --*/
+.InternalResearchBackground {
+	background: url(/images/IMG_2135.jpg) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+}
+.heading p {
+	font-family: "Avenir Next";
+	font-size: 50px;
+	font-weight: normal;
+	/*text-transform: uppercase;*/
+	color: black;
+	background-color: white;
+	opacity: 0.7;
+	position: absolute;
+	z-index: 1000;
+	margin-top: 20px;
+	padding-left: 60px;
+	padding-right: 20px;
+}
+/*-- External Research --*/
+.ExternalResearchBackground {	
+	background: url(/images/money.jpg) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+}
+/*-- Podcasts--*/
+.PodcastsBackground {
+
+}
+
+/*-- Favorite Books --*/
+.wall-background {
+	background: url(/images/wall.jpg) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+}
+.books-background {	
+	background: url(/images/favoritebooks.jpg) no-repeat center center;
+	background-size: cover;
+	margin-left: 10%;
+	height: 780px;
+	width: 550px;
+	position: relative;
+}
+.first-row {
+	padding-top: 18%;
+}
+.SteveJobs {
+	width: 10%;
+	height: 30%;
+	border: 1px solid red;
+	margin-left: 50px;
+	position: absolute;
+}
+.ElonMusk {
+	width: 5%;
+	height: 30%;
+	border: 1px solid orange;
+	margin-left: 108px;
+	position: absolute;
+}
+.DethroningTheKing {
+	width: 5%;
+	height: 30%;
+	border: 1px solid yellow;
+	margin-left: 136px;
+	position: absolute;
+}
+.TheOutsiders {
+	width: 4%;
+	height: 30%;
+	border: 1px solid green;
+	margin-left: 165px;
+	position: absolute;
+}
+.ColdSteel {
+	width: 4%;
+	height: 30%;
+	border: 1px solid blue;
+	margin-left: 186px;
+	position: absolute;
+}
+.SteveJobs:hover:after {
+	content: 'hi';
+}
+.content {
+	border: 2px solid white;
+	position: absolute;
+	width: 40%;
+	height: 30%;
+	margin-top: -700px;
+	margin-left: 720px;
+}
+
+/*-- Favorite Articles --*/
+.ArticlesBackground {
+
+}
