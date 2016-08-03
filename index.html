@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pendulumApp">
+<head>
+	<title>Pendulum Advisors</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+	<!-- Making it mobile responsive -->
+  	<meta name="viewport" content="width=device-width, user-scalable=false">
+  	<!-- Link to stylesheet(s) -->
+  	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+  	<link type="text/css" rel="stylesheet" href="stylesheetBookshelf.css"/>
+</head>
+	<body>
+			<div ng-view></div>
+
+
+		<!-- <script src="angular.js"></script> -->
+		<!--you might need CDN here-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<!-- <script src="angular-route.js"></script> -->
+		<!--you might need CDN here-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+  		<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+  		<script>
+    	// Initialize Firebase
+    	var config = {
+     		apiKey: "AIzaSyDyLuKmYnoAc53ifXbw0ivwgUdU2kCKT2o",
+     		authDomain: "pendulumadvisors-f7655.firebaseapp.com",
+     		databaseURL: "https://pendulumadvisors-f7655.firebaseio.com",
+   			storageBucket: "",
+   		};
+   		firebase.initializeApp(config);
+ 		</script>
+  	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+  	
+  	<script src="./script.js"></script>
+
+  	<!-- Scrolling Navbar jquery -->
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+		<!-- <script src="js/bootstrap.min.js" type="text/javascript"></script> -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			// navigation click actions	
+			$('.scroll-link').on('click', function(event){
+				event.preventDefault();
+				var sectionID = $(this).attr("data-id");
+				scrollToID('#' + sectionID, 750);
+			});
+			// scroll to top action
+			$('.scroll-top').on('click', function(event) {
+				event.preventDefault();
+				$('html, body').animate({scrollTop:0}, 'slow'); 	
+			});
+			// mobile nav toggle
+			$('#nav-toggle').on('click', function (event) {
+				event.preventDefault();
+				$('#main-nav').toggleClass("open");
+			});
+		});
+		// scroll function
+		function scrollToID(id, speed){
+			var offSet = 50;
+			var targetOffset = $(id).offset().top - offSet;
+			var mainNav = $('#main-nav');
+			$('html, body').animate({scrollTop:targetOffset}, speed);
+			if (mainNav.hasClass("open")) {
+				mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+				mainNav.removeClass("open");
+			}
+		}
+		if (typeof console === "undefined") {
+    	console = {
+        log: function() { }
+    	};
+		}
+		</script>	 -->
+		<!-- End of jquery -->
+
+		
+	</body>
+
+</html>
+
