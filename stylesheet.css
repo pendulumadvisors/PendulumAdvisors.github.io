@@ -140,20 +140,25 @@
 	color: #707070;
 }
 .teamImg {
-	max-width: 200px;
+	max-width: 180px;
 	height: 170px;
 	border-radius: 100%;
 	display: block;
-	margin-bottom: 100px;
-	display: block;
 }
 .row h2 {
-	margin-left: 20px;
 	font-size: 14px;
 	font-weight: normal;
 	font-family: "Avenir Next";
 	text-transform: uppercase;
 }
+.directors {
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+.directors img {
+	margin-bottom: 60px;
+}
+
 .col-md-2 p {
 	margin-left: 18px;
 	font-family: "Avenir Next";

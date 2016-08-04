@@ -1,44 +1,55 @@
 var app = angular.module("pendulumApp", ["ngRoute", "firebase"]); 
 
-// app.run(["$rootScope", "$location", function($rootScope, $location) {
-//   $rootScope.$on("$routeChangeError", function(event, next, previous, error) {
-//     // We can catch the error thrown when the $requireSignIn promise is rejected
-//     // and redirect the user back to the home page
-//     if (error === "AUTH_REQUIRED") {
-//       $location.path("/");
-//     }
-//   });
-// }]);
+app.run(["$rootScope", "$location", function($rootScope, $location) {
+  $rootScope.$on("$routeChangeError", function(event, next, previous, error) {
+    // We can catch the error thrown when the $requireSignIn promise is rejected
+    // and redirect the user back to the home page
+    if (error === "AUTH_REQUIRED") {
+      $location.path("/login");
+    }
+  });
+}]);
 
 app.config(function($routeProvider, $locationProvider) {
 	$routeProvider.when("/", {
 		templateUrl: "templates/home.html",
 		controller: 'ScrollCtrl'
-    });
+   });
+
+   $routeProvider.when("/signup", {
+      templateUrl: "templates/signup.html",
+      controller: "SignupCtrl"
+   })
+
 	$routeProvider.when("/login", {
-		templateUrl: "templates/login.html",
+	   templateUrl: "templates/login.html",
 		controller: "LoginCtrl"
 	});
     $routeProvider.when("/adminlogin", {
-        templateUrl: "templates/adminlogin.html",
-        controller: "LoginCtrl"
+      templateUrl: "templates/adminlogin.html",
+      controller: "LoginCtrl",
     });
     $routeProvider.when("/adminPage", {
         templateUrl: "templates/adminPage.html",
-        controller: "AdminCtrl"
+        controller: "AdminCtrl",
+        resolve: {
+            "currentAuth": function($firebaseAuth) {
+            return $firebaseAuth().$requireSignIn();
+            }
+      }
     });
 	$routeProvider.when('/main', {
 		templateUrl: 'templates/main.html',
-		controller: 'MainCtrl'
-		// resolve: {
-  //     		"currentAuth": function($firebaseAuth) {
-	 //        return $firebaseAuth().$requireSignIn();
-  //     		}
-  // 		}	
+		controller: 'MainCtrl',
+		resolve: {
+      		"currentAuth": function($firebaseAuth) {
+	         return $firebaseAuth().$requireSignIn();
+      		}
+  		}	
 	});
-    $routeProvider.when("/research", {
-        templateUrl: "templates/research.html"
-    });
+   $routeProvider.when("/research", {
+      templateUrl: "templates/research.html"
+   });
 	$routeProvider.when('/InternalResearch', {
 		templateUrl: 'templates/InternalResearch.html'
 	});
@@ -123,35 +134,22 @@ app.controller('ScrollCtrl', function($scope, $location, anchorSmoothScroll) {
 
 
 /*-- Controller for Login --*/
-app.controller('LoginCtrl', function($scope, $firebaseAuth, $location) {
+app.controller('LoginCtrl', function($scope, $firebaseObject, $firebaseAuth, $firebaseArray, $window) {
     $scope.authObj = $firebaseAuth();
+    
+    $scope.logIn = function() {
+      $scope.authObj.$signInWithEmailAndPassword($scope.email, $scope.password)
+      .then(function(firebaseUser) {
+      console.log("Signed in as:", firebaseUser.uid);
+      $window.location.href = "#/main";
 
-	$scope.login = function() {
-		console.log("do login");
-		$scope.errorMessage = "";
-		console.log($scope.password);
-		
-		var ref = new Firebase("https://pendulumadvisors-f7655.firebaseio.com");
-		ref.authWithPassword({
-			"password": "123456"
-		}, function(error, authData) {
-			if (error) {
-				console.log("Login Failed!", error);
-			} else {
-				console.log("Authentication success!", authData);
-			}
-		});
-		// $scope.authObj.$signInWithEmailAndPassword($scope.email, $scope.password)
-		// .then(function(firebaseUser) {
-		// 	console.log("Signed in as:", firebaseUser.uid);
-		// 	$scope.firebaseUser1 = firebaseUser;
-		// 	console.log($scope.firebaseUser1);
-		// }).catch(function(error) {
-		// 	console.error("Authentication failed:", error);
-		// 	$scope.errorMessage = error.message;
-		// });
-	
-	}
+         // $scope.currentUser = $scope.authObj.$getAuth();
+         // var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
+         // $scope.user = $firebaseObject(userRef);
+      }).catch(function(error) {
+      console.error("Authentication failed:", error);
+      });
+   }
 });
 
 
@@ -172,29 +170,66 @@ app.directive("fileread", function () {
         }
     }
 });
-app.controller("AdminCtrl", function(currentAuth, $scope, $routeParams, $firebaseObject, $firebaseArray) {
-   $scope.upload = function() {
-      var imgRef = firebase.storage().ref().child($scope.newMessage.image.name);
-      var uploadTask = imgRef.put($scope.newMessage.image)// Listen for state changes, errors, and completion of the upload.
-      uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
-      function(snapshot) {
-         // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-         var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-         console.log('Upload is ' + progress + '% done');
+app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $firebaseObject, $firebaseArray, $window) {
+  //  $scope.upload = function() {
+  //     var imgRef = firebase.storage().ref().child($scope.newMessage.image.name);
+  //     var uploadTask = imgRef.put($scope.newMessage.image)// Listen for state changes, errors, and completion of the upload.
+  //     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+  //     function(snapshot) {
+  //        // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+  //        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+  //        console.log('Upload is ' + progress + '% done');
+  //     }, function(error) {
+  //        console.log(error);
+  //     }, function() {
+  //        // Upload completed successfully, now we can get the download URL
+  //        var downloadURL = uploadTask.snapshot.downloadURL;
+  //        console.log("Download", downloadURL, $scope.newMessage);
+  //     $scope.messages.$add({
+  //       sender: currentAuth.uid,
+  //       text: $scope.newMessage.text,
+  //       image: downloadURL,
+  //       created_at: Date.now()
+  //     });
+  //   });
+  // };
+  $scope.upload = function() {
+      $scope.authObj = $firebaseAuth();
+      $scope.currentUser = $scope.authObj.$getAuth();
+      var file = document.getElementById("file-selector").files[0];
+      r = new FileReader();
+      console.log(file);
+      r.onloadend = function(event) {
+         var data = event.target.result;
+      }
+      r.readAsBinaryString(file);
+      var storageRef = firebase.storage().ref("pdfs/" + $scope.currentUser.uid + "/" + file.name);
+      var uploadTask = storageRef.put(file);
+      uploadTask.on("state_changed", function(snapshot) {
+
       }, function(error) {
-         console.log(error);
+
       }, function() {
-         // Upload completed successfully, now we can get the download URL
          var downloadURL = uploadTask.snapshot.downloadURL;
-         console.log("Download", downloadURL, $scope.newMessage);
-      $scope.messages.$add({
-        sender: currentAuth.uid,
-        text: $scope.newMessage.text,
-        image: downloadURL,
-        created_at: Date.now()
+         var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
+         $scope.currentUserData = $firebaseObject(userRef);
+         $scope.currentUserData.$loaded().then(function() {
+            var pdfsRef = firebase.database().ref().child("pdfs").child($scope.currentUser.uid);
+            $scope.pdfs = $firebaseArray(pdfsRef);
+            $scope.pdfs.$loaded().then(function() {
+               $scope.pdfs.$add({
+                  admin_id: $scope.currentUser.uid,
+                  pdf_name: $scope.pdfName,
+                  pdf_description: $scope.pdfDescription,
+                  pdf_image: downloadURL
+               });
+
+               console.log("PDF added");
+               $window.location.href = "#/main";
+            });
+         });
       });
-    });
-  };
+   };
 
 });
 
@@ -263,22 +298,10 @@ app.controller('MainCtrl', function($scope, $firebaseAuth, $location) {
     var auth = $firebaseAuth();
     $scope.logout = function() {
     	auth.$signOut();
+      console.log("User signed out");
     	$location.path("/");
   	};
-	// $scope.download = function() {
-	// 	final long ONE_MEGABYTE = 1024 * 1024;
-	// 	islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
- //   			@Override
- //    		public void onSuccess(byte[] bytes) {
- //        		// Data for "images/island.jpg" is returns, use this as needed
- //    		}
-	// 	}).addOnFailureListener(new OnFailureListener() {
- //    		@Override
- //    		public void onFailure(@NonNull Exception exception) {
- //        		// Handle any errors
- //    		}
-	// 	});
-	// };
+	
 	$scope.myBlobObject=undefined;
 	$scope.getFile=function(){
         console.log('download started, you can show a wating animation');
@@ -293,3 +316,47 @@ app.controller('MainCtrl', function($scope, $firebaseAuth, $location) {
                             };
 });
 
+app.controller("SignupCtrl", function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $window) {
+   $scope.authObj = $firebaseAuth();
+
+   $scope.signUp = function() {
+
+      $scope.authObj.$createUserWithEmailAndPassword($scope.newEmail, $scope.newPassword).then(function(firebaseUser) {
+         var ref = firebase.database().ref().child("users").child(firebaseUser.uid);
+         $scope.user = $firebaseObject(ref);
+         $scope.user.username = $scope.newUsername;
+         $scope.user.first_name = $scope.newFirstName;
+         $scope.user.last_name = $scope.newLastName;
+         $scope.user.email = $scope.newEmail;
+         $scope.user.password = $scope.newPassword;
+         $scope.user.$save();
+         console.log("User " + firebaseUser.uid + " successfully created!");
+
+         $scope.newUsername = "";
+         $scope.newFirstName = "";
+         $scope.newLastName = "";
+         $scope.newEmail = "";
+         $scope.newPassword = "";
+
+         $window.location.href = "#/main";
+      }).catch(function(error) {
+         console.log("Error: ", error);
+      })
+   };
+});
+
+/* -- For bookshelf funsies -- */
+function toggleImage() {
+   document.getElementById("lightbox").classList.add("isVisible");
+}
+
+function closeMenu() {
+   document.getElementById("lightbox").classList.remove('isVisible');
+}
+
+document.getElementById("SteveJobs").onclick = function() {
+   toggleImage();
+};
+document.getElementById('lightbox').onclick = function() {
+   closeMenu();
+};

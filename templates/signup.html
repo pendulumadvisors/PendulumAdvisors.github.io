@@ -1,0 +1,24 @@
+<div class="signup-box">
+	<div class="signup-header">
+		<h1>Sign Up</h1>
+	</div>
+	<form ng-submit="signUp()">
+		<label>First Name</label>
+		<input type="text" ng-model="newFirstName" placeholder="John"/>
+		<label>Last Name</label>
+		<input type="text" ng-model="newLastName" placeholder="Doe"/>
+		<label>Email Address</label>
+		<input type="email" ng-model="newEmail" placeholder="johndoe@email.com"/>
+		<label>Password</label>
+		<input type="password" ng-model="newPassword" placeholder="Password"/>
+		<label>Confirm Password</label>
+		<input type="password" ng-model="newConfirmPassword" placeholder="Password"/>
+		<div class="left">
+			<input type="checkbox"/>
+		</div>
+		<label class="checkbox-label">By clicking on the checkbox above, I indicate that I have read and agree with Pendulum Advisor's<a href="#/terms">Terms &amp; Conditions</a></label>
+		<button type="submit">
+			<h3>Sign Up</h3>
+		</button>
+	</form>
+</div>

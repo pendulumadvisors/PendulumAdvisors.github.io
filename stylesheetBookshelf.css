@@ -227,6 +227,45 @@
 	margin-left: 720px;
 }
 
+/* -- Bookshelf funsies-- */
+.lightbox-bg {
+	/* this should cover the entire screen with a transparent black background */
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0,0,0,.5);
+	z-index: 600;
+}
+
+.lightbox-contents {
+	/* this should center the image on the screen on top of the background*/
+	position: relative;
+	display: block;
+    margin: auto;
+    width: 40%;
+    z-index: 1000;
+    
+}
+
+.lightbox {
+	/* this should not be on the screen to start*/
+	/*transform: translate(100%,0); */
+	/* note: this transform moves it off screen
+	inside the parentheses corresponds to 
+	(screen width, screen height)
+	*/
+	display: none;
+}
+
+.isVisible {
+	/* this does exactly what it sounds like it does */
+	/*transform: translate(0%, 0);*/
+	/* this transform moves it back onto the screen */
+	display: block;
+}
+
 /*-- Favorite Articles --*/
 .ArticlesBackground {
 
