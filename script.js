@@ -12,7 +12,6 @@ var app = angular.module("pendulumApp", ["ngRoute", "firebase"]);
 
 app.config(function($routeProvider, $locationProvider) {
 	$routeProvider.when("/", {
-		// controller: 'HomeCtrl',
 		templateUrl: "templates/home.html",
 		controller: 'ScrollCtrl'
     });
@@ -20,9 +19,14 @@ app.config(function($routeProvider, $locationProvider) {
 		templateUrl: "templates/login.html",
 		controller: "LoginCtrl"
 	});
-	$routeProvider.when("/research", {
-		templateUrl: "templates/research.html"
-	});
+    $routeProvider.when("/adminlogin", {
+        templateUrl: "templates/adminlogin.html",
+        controller: "LoginCtrl"
+    });
+    $routeProvider.when("/adminPage", {
+        templateUrl: "templates/adminPage.html",
+        controller: "AdminCtrl"
+    });
 	$routeProvider.when('/main', {
 		templateUrl: 'templates/main.html',
 		controller: 'MainCtrl'
@@ -32,6 +36,9 @@ app.config(function($routeProvider, $locationProvider) {
   //     		}
   // 		}	
 	});
+    $routeProvider.when("/research", {
+        templateUrl: "templates/research.html"
+    });
 	$routeProvider.when('/InternalResearch', {
 		templateUrl: 'templates/InternalResearch.html'
 	});
@@ -49,6 +56,73 @@ app.config(function($routeProvider, $locationProvider) {
 	});
 });
 
+
+/*-- Service and Controller for anchorSmoothScroll --*/
+app.service('anchorSmoothScroll', function(){
+    this.scrollTo = function(eID) {
+
+        // This scrolling function 
+        // is from http://www.itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
+        var startY = currentYPosition();
+        var stopY = elmYPosition(eID);
+        var distance = stopY > startY ? stopY - startY : startY - stopY;
+        if (distance < 100) {
+            scrollTo(0, stopY); return;
+        }
+        var speed = Math.round(distance / 100);
+        if (speed >= 20) speed = 20;
+        var step = Math.round(distance / 25);
+        var leapY = stopY > startY ? startY + step : startY - step;
+        var timer = 0;
+        if (stopY > startY) {
+            for ( var i=startY; i<stopY; i+=step ) {
+                setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+            } return;
+        }
+        for ( var i=startY; i>stopY; i-=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+        }
+        
+        function currentYPosition() {
+            // Firefox, Chrome, Opera, Safari
+            if (self.pageYOffset) return self.pageYOffset;
+            // Internet Explorer 6 - standards mode
+            if (document.documentElement && document.documentElement.scrollTop)
+                return document.documentElement.scrollTop;
+            // Internet Explorer 6, 7 and 8
+            if (document.body.scrollTop) return document.body.scrollTop;
+            return 0;
+        }
+        
+        function elmYPosition(eID) {
+            var elm = document.getElementById(eID);
+            var y = elm.offsetTop;
+            var node = elm;
+            while (node.offsetParent && node.offsetParent != document.body) {
+                node = node.offsetParent;
+                y += node.offsetTop;
+            } return y;
+        }
+    };
+});
+
+app.controller('ScrollCtrl', function($scope, $location, anchorSmoothScroll) {
+   
+    $scope.gotoElement = function (eID){
+      // set the location.hash to the id of
+      // the element you wish to scroll to.
+      console.log("scroll success!");
+      $location.hash('bottom');
+ 
+      // call $anchorScroll()
+      anchorSmoothScroll.scrollTo(eID);
+    };
+  });
+
+
+/*-- Controller for Login --*/
 app.controller('LoginCtrl', function($scope, $firebaseAuth, $location) {
     $scope.authObj = $firebaseAuth();
 
@@ -80,14 +154,51 @@ app.controller('LoginCtrl', function($scope, $firebaseAuth, $location) {
 	}
 });
 
-// /* Scroll down button function */
-// $(function() {
-// 	$('a[href*=#]').on('click', function(e) {
-// 		e.preventDefault();
-// 		$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-// 	});
-// });
 
+/* -- Controller for adminPage.html -- */
+app.directive("fileread", function () {
+    return {
+        scope: {
+            fileread: "="
+        },
+        link: function (scope, element, attributes) {
+            element.bind("change", function (changeEvent) {
+                scope.$apply(function () {
+                    scope.fileread = changeEvent.target.files[0];
+                    // or all selected files:
+                    // scope.fileread = changeEvent.target.files;
+                });
+            });
+        }
+    }
+});
+app.controller("AdminCtrl", function(currentAuth, $scope, $routeParams, $firebaseObject, $firebaseArray) {
+   $scope.upload = function() {
+      var imgRef = firebase.storage().ref().child($scope.newMessage.image.name);
+      var uploadTask = imgRef.put($scope.newMessage.image)// Listen for state changes, errors, and completion of the upload.
+      uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+      function(snapshot) {
+         // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+         var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+         console.log('Upload is ' + progress + '% done');
+      }, function(error) {
+         console.log(error);
+      }, function() {
+         // Upload completed successfully, now we can get the download URL
+         var downloadURL = uploadTask.snapshot.downloadURL;
+         console.log("Download", downloadURL, $scope.newMessage);
+      $scope.messages.$add({
+        sender: currentAuth.uid,
+        text: $scope.newMessage.text,
+        image: downloadURL,
+        created_at: Date.now()
+      });
+    });
+  };
+
+});
+
+/* -- Directive and Controller for main.html (for clients)-- */
 app.directive('fileDownload',function(){
     return{
         restrict:'A',
@@ -97,7 +208,6 @@ app.directive('fileDownload',function(){
         },
 
         link:function(scope,elem,atrs){
-
 
             scope.$watch('fileDownload',function(newValue, oldValue){
 
@@ -148,7 +258,8 @@ app.directive('fileDownload',function(){
         }
     }
 })
-app.controller('MainCtrl', function($scope, $firebaseAuth, $location, anchorSmoothScroll) {
+
+app.controller('MainCtrl', function($scope, $firebaseAuth, $location) {
     var auth = $firebaseAuth();
     $scope.logout = function() {
     	auth.$signOut();
@@ -180,81 +291,5 @@ app.controller('MainCtrl', function($scope, $firebaseAuth, $location, anchorSmoo
                                     $scope.myBlobObject=[];
                                 });
                             };
-
-    $scope.gotoElement = function (eID){
-      // set the location.hash to the id of
-      // the element you wish to scroll to.
-      $location.hash('bottom');
- 		console.log("hey");
-      // call $anchorScroll()
-      anchorSmoothScroll.scrollTo(eID);
-    };
-
 });
 
-app.service('anchorSmoothScroll', function(){
-    
-    this.scrollTo = function(eID) {
-
-        // This scrolling function 
-        // is from http://www.itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
-        
-        var startY = currentYPosition();
-        var stopY = elmYPosition(eID);
-        var distance = stopY > startY ? stopY - startY : startY - stopY;
-        if (distance < 100) {
-            scrollTo(0, stopY); return;
-        }
-        var speed = Math.round(distance / 100);
-        if (speed >= 20) speed = 20;
-        var step = Math.round(distance / 25);
-        var leapY = stopY > startY ? startY + step : startY - step;
-        var timer = 0;
-        if (stopY > startY) {
-            for ( var i=startY; i<stopY; i+=step ) {
-                setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-            } return;
-        }
-        for ( var i=startY; i>stopY; i-=step ) {
-            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
-        }
-        
-        function currentYPosition() {
-            // Firefox, Chrome, Opera, Safari
-            if (self.pageYOffset) return self.pageYOffset;
-            // Internet Explorer 6 - standards mode
-            if (document.documentElement && document.documentElement.scrollTop)
-                return document.documentElement.scrollTop;
-            // Internet Explorer 6, 7 and 8
-            if (document.body.scrollTop) return document.body.scrollTop;
-            return 0;
-        }
-        
-        function elmYPosition(eID) {
-            var elm = document.getElementById(eID);
-            var y = elm.offsetTop;
-            var node = elm;
-            while (node.offsetParent && node.offsetParent != document.body) {
-                node = node.offsetParent;
-                y += node.offsetTop;
-            } return y;
-        }
-
-    };
-    
-});
-
-app.controller('ScrollCtrl', function($scope, $location, anchorSmoothScroll) {
-    $scope.gotoElement = function (eID){
-      // set the location.hash to the id of
-      // the element you wish to scroll to.
-      console.log("in function");
-      $location.hash('bottom');
- 
-      // call $anchorScroll()
-      anchorSmoothScroll.scrollTo(eID);
-      
-    };
-  });

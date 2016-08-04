@@ -261,29 +261,33 @@
 }
 
 /*-- Login Page --*/
-.loginPage img {
-	display: block;
-	margin: 0 auto;
+.closedsafe {
+	background: url(/images/closedsafe1.jpg) no-repeat center center;
+	background-size: contain;
+	text-align: center;
+	margin: 0px auto;
 	height: 100vh;
-	/*width: 100vw;*/
-	/*background: url(/images/closedsafe1.jpg) no-repeat center center;
-	background-size: cover;*/
+	width: 430px;
+	position: relative;	
 }
 .block {
-	text-align: center;
-	margin-top: -400px;
 	font-family: "Avenir Next";
-}
-.loginButton {
-	padding: 3px;
 	text-transform: uppercase;
+	margin-top: 48%;
+	margin-left: 25%;
+	position: absolute;
 }
-.loginPage p {
-	margin-top: 300px;
+.closedsafe p {
+	margin-top: 98%;
+	margin-left: 15%;
 	font-size: 15px;
 	color: white;
 	text-align: center;
 	text-transform: uppercase;
+	position: absolute;
+}
+.loginpage a {
+	float: bottom;
 }
 
 /*-- --*/

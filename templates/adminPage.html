@@ -1,0 +1,10 @@
+<h1> Uploading Research </h1>
+<p> These uploads by the admin will show on internalresearch.html where the clients can then download the files</p>
+
+<form ng-submit="upload()">
+	<input type="file" fileread="newMessage.image">
+</form>
+
+<div ng-show="message.image">
+      <img ng-src="{{ message.image }}">
+    </div>

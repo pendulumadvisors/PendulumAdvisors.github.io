@@ -18,21 +18,10 @@
 		</div>
 
 		<ul class="nav navbar-nav navbar-right hidden-xs">
-			<li class="dropdown">
-				<a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown" data-id="about" role="button" aria-haspopup="true" aria-expanded="false">
-					About
-					<span class="caret"></span>
-				</a>
-				<ul class="dropdown-menu">
-					<li><a href="#about">Description</a></li>
-					<li><a href="#/learnmore">Learn More</a></li>
-				</ul>
-			</li>
-
-			<!-- <li><a a href="#team" class="scroll-link" data-id="team">Our Team</a></li> -->
+			<li><a ng-click="gotoElement('about')">About</a></li>
 			<li><a ng-click="gotoElement('team')">Our Team</a></li>
 			<li><a href="#/research" class="scroll-link">Research</a></li>
-			<li><a a href="#contact" class="scroll-link" data-id="contact">Contact</a></li>
+			<li><a ng-click="gotoElement('contact')">Contact</a></li>
 			<button type="button" class="btn btn-default navbar-btn">
 			<a href="#/login">Client Login</a></button>
 
@@ -41,13 +30,14 @@
 </div><!-- /.container-fluid -->
 </header>
 <!-- End of Nav bar-->
+
 <!-- Landing -->
 <div class="landing">
 	<!-- <div class="heading">
 		<h1><i>"The pendulum always swings"</i></h1>
 	</div> -->
 	<section id="section03" class="demo">
-	<a href="#about"><span></span></a>
+	<a ng-click="gotoElement('about')">Scroll<span></span></a>
 	</section>
 </div>
 
