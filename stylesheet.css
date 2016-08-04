@@ -101,7 +101,7 @@
 	padding-right: 10%;
 }
 .logo {
-	padding-top: 80px;
+	padding-top: 70px;
 	text-align: center;
 	width: 20%;
 	height: 30%;
@@ -153,16 +153,9 @@
 }
 .directors {
 	margin-top: 30px;
-	margin-bottom: 100px;
 }
 .directors img {
-	margin-bottom: 60px;
-}
-
-.col-md-2 p {
-	margin-left: 18px;
-	font-family: "Avenir Next";
-	word-wrap: break-word;
+	margin-bottom: 70px;
 }
 .internsImg {
 	max-width: 110px;
@@ -183,6 +176,9 @@
 	font-family: "Avenir Next";
 	margin: 0 auto;
 	display: block;
+}
+.col-md-9 p {
+	font-family: "Avenir Next";
 }
 
 /*-- Our Space --*/
