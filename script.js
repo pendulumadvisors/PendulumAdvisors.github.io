@@ -48,8 +48,8 @@ app.config(function($routeProvider, $locationProvider) {
   		}	
 	});
    $routeProvider.when("/gallery", {
-      templateUrl: "templates/gallery.html",
-      controller: "GalleryCtrl"
+      templateUrl: "templates/gallery.html"
+      // controller: "GalleryCtrl"
    });
    $routeProvider.when("/research", {
       templateUrl: "templates/research.html"
@@ -392,7 +392,7 @@ document.getElementById('lightbox').onclick = function() {
 };
 
 /*-- Gallery Controller --*/
-app.controller("GalleryCtrl", function($scope) {
+// app.controller("GalleryCtrl", function($scope) {
   
-});
+// });
 

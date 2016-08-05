@@ -115,6 +115,8 @@
 	background: rgba(0, 0, 0, 0.7);
 }
 .return a {
+	text-transform: uppercase;
+	font-weight: 100;
 	position: absolute;
 	top: 40px;
 	left: 40px;
