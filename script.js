@@ -27,7 +27,7 @@ app.config(function($routeProvider, $locationProvider) {
 	});
     $routeProvider.when("/adminlogin", {
       templateUrl: "templates/adminlogin.html",
-      controller: "LoginCtrl",
+      controller: "LoginCtrl"
     });
     $routeProvider.when("/adminPage", {
         templateUrl: "templates/adminPage.html",
@@ -47,12 +47,13 @@ app.config(function($routeProvider, $locationProvider) {
       		}
   		}	
 	});
+   $routeProvider.when("/gallery", {
+      templateUrl: "templates/gallery.html",
+      controller: "GalleryCtrl"
+   });
    $routeProvider.when("/research", {
       templateUrl: "templates/research.html"
    });
-	$routeProvider.when('/InternalResearch', {
-		templateUrl: 'templates/InternalResearch.html'
-	});
 	$routeProvider.when('/ExternalResearch', {
 		templateUrl: 'templates/ExternalResearch.html'
 	});
@@ -193,7 +194,7 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
   //     });
   //   });
   // };
-  $scope.upload = function() {
+   $scope.upload = function() {
       $scope.authObj = $firebaseAuth();
       $scope.currentUser = $scope.authObj.$getAuth();
       var file = document.getElementById("file-selector").files[0];
@@ -313,7 +314,36 @@ app.controller('MainCtrl', function($scope, $firebaseAuth, $location) {
                 console.log('Download Error, stop animation and show error message');
                                     $scope.myBlobObject=[];
                                 });
-                            };
+   };
+   $scope.downloadFile = function() {
+      $scope.authObj = $firebaseAuth();
+      $scope.currentUser = $scope.authObj.$getAuth();
+
+      // Create a reference from a Google Cloud Storage URI
+      var gsReference = storage.refFromURL('gs://pendulumadvisors-f7655.appspot.com/pdfs/' + file.name);
+      // Get the download URL
+      gsReference.getDownloadURL().then(function(url) {
+      // Insert url into an <img> tag to "download"
+      }).catch(function(error) {
+      switch (error.code) {
+         case 'storage/object_not_found':
+         // File doesn't exist
+         break;
+
+         case 'storage/unauthorized':
+         // User doesn't have permission to access the object
+         break;
+
+         case 'storage/canceled':
+         // User canceled the upload
+         break;
+
+         case 'storage/unknown':
+         // Unknown error occurred, inspect the server response
+         break;
+      }
+   });                  
+   };
 });
 
 app.controller("SignupCtrl", function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $window) {
@@ -360,3 +390,9 @@ document.getElementById("SteveJobs").onclick = function() {
 document.getElementById('lightbox').onclick = function() {
    closeMenu();
 };
+
+/*-- Gallery Controller --*/
+app.controller("GalleryCtrl", function($scope) {
+  
+});
+

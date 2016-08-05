@@ -20,8 +20,9 @@
 		<ul class="nav navbar-nav navbar-right hidden-xs">
 			<li><a ng-click="gotoElement('about')">About</a></li>
 			<li><a ng-click="gotoElement('team')">Our Team</a></li>
-			<li><a href="#/research" class="scroll-link">Research</a></li>
+			<li><a ng-click="gotoElement('space')">Gallery</a></li>
 			<li><a ng-click="gotoElement('contact')">Contact</a></li>
+			<li><a href="#/research" class="scroll-link">Research</a></li>
 			<button type="button" class="btn btn-default navbar-btn">
 			<a href="#/login">Client Login</a></button>
 
@@ -104,7 +105,7 @@
 			</div>
 			<div class="col-md-9" >
 				<h2> <b>Gerard Pacak</b> | Director</h2>
-				<p> Completed B.Comm management studies followed by Honors in Financial Analysis and Portfolio Management at UCT, graduating in 2014. Passed CFA level 1 before moving to the UK for year, where he worked at Saracens RFC in the marketing team for 5 months. In January 2015, moved back to South Africa to join Pendulum Advisors, a boutique assisting clients with their investment decisions.</p>
+				<p> Gerard completed his B.Comm management studies followed by Honors in Financial Analysis and Portfolio Management at UCT, graduating in 2014. He passed CFA level 1 before moving to the UK for year, where he worked at Saracens RFC in the marketing team for 5 months. In January 2015, Gerard moved back to South Africa to join Pendulum Advisors, a boutique assisting clients with their investment decisions.</p>
 				<p> <b>Email:</b> gerard@pendulumadvisors.com </p>
 			</div>
 			</div>
@@ -160,7 +161,7 @@
 <div class="wood-column">
 	<div class="container">
 		<div class="row">
-			<div class="ourSpace">
+			<div id="space" class="ourSpace">
 				<h1>Our Office Space</h1>
 
 			<div class="col-xs-6 col-sm-4 col-md-4">  
@@ -220,9 +221,11 @@
 				</div>
 			</div>
 
+			<button type="button" class="btn btn-default">
+				<a href="#/gallery">See more photos</a>
+			</button>
 			</div>
 		</div>
-
 	</div> <!--End of container-->
 </div>
 

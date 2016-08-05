@@ -215,19 +215,27 @@
 .thumbnail:hover .caption {
     top: 0%;
 }
-
-#clocks {
-	width: 940px;
-	height: 290px;
+.ourSpace button {
+	padding: 5px;
+	background-color: #d84727;
+	text-transform: uppercase;
+	font-weight: 100;
+	margin: 0px auto;
+	display: block;
 }
-
+.ourSpace button a {
+	text-decoration: none;
+	color: white;
+}
 .wood-column-spacing {
 	background: url(/images/woodpanelcopy.jpg) ;
 	background-size: cover;
 }
 .spacing {
-	height: 80px;
+	height: 40px;
 }
+/*-- Gallery --*/
+
 
 /*-- Footer --*/
 .footer {
@@ -289,52 +297,6 @@
 }
 .loginpage a {
 	float: bottom;
-}
-
-/*-- --*/
-
-/*-- Main Page --*/
-.logoutBtn {
-	margin-top: 5px;
-	background-color: #d84727;
-	color: white;
-	font-family: "Avenir Next";
-	font-size: 15px;
-	font-weight: 100;
-	text-transform: uppercase;
-	border-radius: 4px;
-}
-.opensafe {
-	padding-top: 30px;
-	display: block;
-	margin: 0 auto;
-	height: 80vh;
-	/*width: 95%;
-	margin: 30px 0px 0px 30px;*/
-	/*height: 100vh;*/
-	/*background: url(/images/opensafe.jpg) no-repeat center center;
-	background-size: cover;*/
-}
-.opensafe h1 {
-	color: black;
-	text-align: center;
-	font-family: "Avenir Next";
-	text-transform: uppercase;
-	/*font-size: 50px;*/
-	font-weight: normal;
-}
-.researchList {
-	text-align: center;
-	font-family: "Avenir Next";
-	font-size: 18px;
-}
-.btn-default {
-	background-color: #d84727;
-	color: white;
-	font-family: "Avenir Next";
-	font-size: 15px;
-	font-weight: 100;
-	text-transform: uppercase;
 }
 
 /* Scroll Button */
