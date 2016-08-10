@@ -41,7 +41,7 @@
 				<p>Internal Research</p>
 			</div>
 		<!-- Start of research list downloads -->
-			<div class="researchList">
+			<!-- <div class="researchList">
 				<ul>
 					<li><p> Pdf tester lala
 						<a href="pdfs/SubleaseAgreement.pdf" class="btn btn-default" file-name="'fileName.extension'"  ng-click="getFile()" file-download="myBlobObject"><i class="fa fa-file-excel-o"></i>Download</a></p>
@@ -51,24 +51,24 @@
 						<a href="#" class="btn btn-default" file-name="'fileName.extension'" ng-click="getFile()" file-download="myBlobObject"><i class=fa fa-file-excel-o"></i>Download</a></p>
 					</li>
 					<li></li>
-					<li><P> Meow pdf 
+					<li><P> Get pdf from firebase storage 
 						<a class="btn btn-default" ng-click="downloadFile()">Download</a>
 					</p>
 					</li>
 				</ul>
-			</div>
-		<!-- End of research list downloads -->	
+			</div> -->
+		
 			<div class="browse-list" ng-repeat="pdf in pdfs track by $index">
 				<div class="row">
 					<div class="browse-list-left">
 						<h2><strong>{{ pdf.pdf_name }}</strong></h2>
-						
+						<button><a href="{{ pdf.pdf_image }}"> Click to open </a></button>
 						<h5><strong>PDF Description</strong></h5>
 						<p>{{ pdf.pdf_description }}</p>
 					</div>
 				</div>
 			</div>
-
+		<!-- End of research list downloads -->	
 		</div>
 	</div>
 

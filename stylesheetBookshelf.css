@@ -305,10 +305,19 @@
 	/* this should center the image on the screen on top of the background*/
 	position: relative;
 	display: block;
-    margin: auto;
+    margin-top: -55%;
+    margin-left: 40%;
     width: 40%;
-    z-index: 1000;
-    
+    z-index: 1000; 
+}
+.lightbox-contents2 {
+	/* this should center the image on the screen on top of the background*/
+	position: relative;
+	display: block;
+    margin-top: -55%;
+    margin-left: 40%;
+    width: 40%;
+    z-index: 1000; 
 }
 
 .lightbox {

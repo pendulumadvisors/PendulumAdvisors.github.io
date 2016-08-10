@@ -299,10 +299,17 @@
 	width: 430px;
 	position: relative;	
 }
-.block {
+.emailBlock {
 	font-family: "Avenir Next";
 	text-transform: uppercase;
-	margin-top: 48%;
+	margin-top: 49%;
+	margin-left: 25%;
+	position: absolute;
+}
+.psBlock {
+	font-family: "Avenir Next";
+	text-transform: uppercase;
+	margin-top: 55%;
 	margin-left: 25%;
 	position: absolute;
 }
