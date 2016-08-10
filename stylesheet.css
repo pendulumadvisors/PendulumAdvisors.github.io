@@ -14,6 +14,10 @@
     margin: 0;
     transition: all 0.4s;
 }
+.navbar-toggle .icon-bar {
+	color: gray;
+	border: 2px solid gray;
+}
 .navbar-brand {
 	padding-top: 0px;
 	display: inline-block;
@@ -27,14 +31,7 @@
 .navbar-right {
 	padding-right: 40px;
 }
-.scroll-link {
-	color: black;
-	font-family: "Avenir Next";
-	font-size: 15px;
-	font-weight: 130;
-	text-transform: uppercase;
-}
-.navbar a { /*Research link style*/
+.navbar a { 
 	text-decoration: none;
 	color: black;
 	font-family: "Avenir Next";
@@ -54,17 +51,9 @@
 	text-decoration: none;
 	color: white;
 }
-
 .navbar.nav-white {
     background-color: white;
     border-bottom: 1pt solid #ddd;
-}
-.navbar:before, .navbar:after {
-    content: " ";
-    display: table;
-}
-.navbar:after {
-    clear: both;
 }
 
 /*-- Landing page --*/
@@ -110,10 +99,8 @@
 }
 .aboutPA {
 	text-align: center;
-	margin: 0px 100px 0px 100px;
+	margin: 0px 50px 0px 50px;
 	font-size: 20px;
-}
-.aboutPA p { 
 	font-family: "Avenir Next";
 }
 .aboutPA button {
@@ -127,6 +114,11 @@
 	color: white;
 	font-size: 18px;
 }
+@media (max-width: 545px) {
+	.aboutPA {
+		font-size: 16px;
+	}
+}
 
 /*-- Our Team --*/
 .ourTeam h1 {
@@ -135,7 +127,6 @@
 	/*text-align: center;*/
 	font-family: "Avenir Next";
 	text-transform: uppercase;
-	/*font-size: 50px;*/
 	font-weight: normal;
 	color: #707070;
 }
@@ -163,19 +154,16 @@
 	margin: 0 auto;
 	display: block;
 }
-.row h3 {
+.intern h3 {
 	font-size: 12px;
 	font-weight: normal;
 	font-family: "Avenir Next";
 	text-transform: uppercase;
+	text-align: center;
 }
-.col-md-3 p {
+.intern p {
 	font-family: "Avenir Next";
-}
-.col-md-4 p {
-	font-family: "Avenir Next";
-	margin: 0 auto;
-	display: block;
+	text-align: center;
 }
 .col-md-9 p {
 	font-family: "Avenir Next";
@@ -288,7 +276,11 @@
 .copyright {
 	text-align: center;
 }
-
+@media (max-width: 991px) {
+	.footer .col-md-12 {
+		margin-top: -20px;
+	}
+}
 /*-- Login Page --*/
 .closedsafe {
 	background: url(/images/closedsafe1.jpg) no-repeat center center;
@@ -330,7 +322,7 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
 .demo a {
 	position: absolute;
-	bottom: 20px;
+	bottom: 100px;
 	left: 50%;
 	z-index: 2;
 	display: inline-block;

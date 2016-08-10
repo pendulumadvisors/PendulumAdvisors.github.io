@@ -1,15 +1,15 @@
 <div class="mainPage">
 	<!--Nav bar-->
-	<header class="navbar navbar-fixed-top hidden-xs nav-white">
+	<header class="navbar navbar-fixed-top nav-white">
 		<div class="navcontainer">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</button>
+				</button> -->
 				<a class="navbar-brand scroll-top" href="#/">
 					<img class="navbar-logo" alt="Brand" src="/images/globe.png">
 				</a>
@@ -19,7 +19,7 @@
 			</div>
 
 			<form ng-submit="logout()">
-				<ul class="nav navbar-nav navbar-right hidden-xs">
+				<ul class="nav navbar-nav navbar-right">
 					<button class="logoutBtn">Logout</a></button>
 				</ul>
 			</form>
@@ -41,30 +41,12 @@
 				<p>Internal Research</p>
 			</div>
 		<!-- Start of research list downloads -->
-			<!-- <div class="researchList">
-				<ul>
-					<li><p> Pdf tester lala
-						<a href="pdfs/SubleaseAgreement.pdf" class="btn btn-default" file-name="'fileName.extension'"  ng-click="getFile()" file-download="myBlobObject"><i class="fa fa-file-excel-o"></i>Download</a></p>
-					</li>
-					<li></li>
-					<li><p> Another pdf here (no pdf here)
-						<a href="#" class="btn btn-default" file-name="'fileName.extension'" ng-click="getFile()" file-download="myBlobObject"><i class=fa fa-file-excel-o"></i>Download</a></p>
-					</li>
-					<li></li>
-					<li><P> Get pdf from firebase storage 
-						<a class="btn btn-default" ng-click="downloadFile()">Download</a>
-					</p>
-					</li>
-				</ul>
-			</div> -->
-		
 			<div class="browse-list" ng-repeat="pdf in pdfs track by $index">
 				<div class="row">
-					<div class="browse-list-left">
-						<h2><strong>{{ pdf.pdf_name }}</strong></h2>
-						<button><a href="{{ pdf.pdf_image }}"> Click to open </a></button>
-						<h5><strong>PDF Description</strong></h5>
-						<p>{{ pdf.pdf_description }}</p>
+					<div class="browse-list-right">
+						{{ pdf.pdf_name }} <button><a href="{{ pdf.pdf_image }}"> Click to open </a></button>
+						<!-- <h5><strong>PDF Description</strong></h5>
+						<p>{{ pdf.pdf_description }}</p> -->
 					</div>
 				</div>
 			</div>

@@ -1,5 +1,5 @@
 <!--Nav bar-->
-<header class="navbar navbar-fixed-top hidden-xs nav-white">
+<header class="navbar navbar-fixed-top nav-white">
 	<div class="navcontainer">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -16,19 +16,19 @@
 				<img class="navbar-logo1" alt="Brand" src="/images/pendulumadvisors.png">
 			</a>
 		</div>
-
-		<ul class="nav navbar-nav navbar-right hidden-xs">
-			<li><a ng-click="gotoElement('about')">About</a></li>
-			<li><a ng-click="gotoElement('team')">Our Team</a></li>
-			<li><a ng-click="gotoElement('space')">Gallery</a></li>
-			<li><a ng-click="gotoElement('contact')">Contact</a></li>
-			<li><a href="#/research" class="scroll-link">Research</a></li>
-			<button type="button" class="btn btn-default navbar-btn">
-			<a href="#/login">Client Login</a></button>
-
-		</ul>
-	</div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
+		<!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a ng-click="gotoElement('about')">About</a></li>
+				<li><a ng-click="gotoElement('team')">Our Team</a></li>
+				<li><a ng-click="gotoElement('space')">Gallery</a></li>
+				<li><a ng-click="gotoElement('contact')">Contact</a></li>
+				<li><a href="#/research" class="scroll-link">Research</a></li>
+				<button type="button" class="btn btn-default navbar-btn">
+				<a href="#/login">Client Login</a></button>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
 </header>
 <!-- End of Nav bar-->
 
@@ -43,23 +43,21 @@
 </div>
 
 <!-- About Pendulum Advisors -->
-<div id="about">
-	<div class="wood-column">
-		<div class="container">
-			<div class="aboutRow">
-				<div class="row">
-					<div class="col-md-12">
-						<img class="logo" src="/images/logo2.png">
-					</div>
+<div class="wood-column">
+	<div class="container">
+		<div class="row">
+			<div id="about" class="aboutRow">
+				<div class="col-md-12">
+					<img class="logo" src="/images/logo2.png">
 				</div>
-				<div class="row">
-					<div class="aboutPA">
-						<p> [We are] focused on both global public and private equity. Public equity focus is a value-based approach focused on quality, defensible economic competitive advantaged companies. Concentrated portfolio constructed based on price downside vs. calculated intrinsic value upside. [Our focus] is on 3-5 years in portfolio and absolute returns of at least 8% p.a. in USD over 3-year rolling period. Private equity focus is longer term with absolute return benchmark of at least 15% p.a.
-						</p>
-						<button type="button" class="btn btn-default">
+			</div>
+			<div class="row">
+				<div class="aboutPA">
+					<p> [We are] focused on both global public and private equity. Public equity focus is a value-based approach focused on quality, defensible economic competitive advantaged companies. Concentrated portfolio constructed based on price downside vs. calculated intrinsic value upside. [Our focus] is on 3-5 years in portfolio and absolute returns of at least 8% p.a. in USD over 3-year rolling period. Private equity focus is longer term with absolute return benchmark of at least 15% p.a.
+					</p>
+					<button type="button" class="btn btn-default">
 						<a href="#/learnmore">Learn more</a>
-						</button>
-					</div>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -80,11 +78,10 @@
 			</div>
 			<div class="col-md-9 ">
 				<h2> <b>Arjan Buikema</b> | Founder</h2>
-				<p> </p>
-				<p> <b>Email:</b> arjan@pendulumadvisors.com</p>
 			
 				<p>While completing a Bsc. in Business Economics in 1993, Arjan moved to Johannesburg as an intern at ABN Amro (then Huysamer Stals), South Africa's largest Afrikaans-speaking broking firm.  While there, he wrote his thesis on the different risks involved in the markets in which the company provided services.  At the end of 1993, he moved permanently to South Africa to become an investment analyst at ABN Amro, focusing on Electronics and Electrical and Publishing and Printing sectors.  In 1996, he joined Societe Generale South Africa, focusing on the small and mid-sized companies. 
-				<br>In 1999, he moved to Cape Town, having joined Old Mutual Asset Managers.  While there, he researched the Media and Internet sectors.  After six years at Old Mutual, Arjan joined the international team at Sanlam Investment Managers, where his focus was more broadly on consumer-related industries across the globe, particularly focused on Asia.  Early 2009, he joined Naspers' Internet division in a supporting role to help the group with its M&amp;A strategy.  In 2012, he founded Pendulum Advisors, a specialist boutique focusing on supporting clients with the their investment decisions through extensive due diligence.  </p>
+				<br>In 1999, he moved to Cape Town, having joined Old Mutual Asset Managers.  While there, he researched the Media and Internet sectors.  After six years at Old Mutual, Arjan joined the international team at Sanlam Investment Managers, where his focus was more broadly on consumer-related industries across the globe, particularly focused on Asia.  Early 2009, he joined Naspers' Internet division in a supporting role to help the group with its M&amp;A strategy.  In 2012, he founded Pendulum Advisors, a specialist boutique focusing on supporting clients with the their investment decisions through extensive due diligence.</p>
+				<p><b>Email:</b> arjan@pendulumadvisors.com</p>
 			</div>
 		</div>
 
@@ -93,9 +90,9 @@
 				<img src="/images/JamesCampbell1.jpg" alt="..." class="teamImg">
 			</div>
 			<div class="col-md-9">
-				<h2> <b>James Campbell</b> | Director</h2>
-				<p> Short bio goes here </p>
-				<p> <b>Email:</b> james@pendulumadvisors.com</p>
+				<h2><b>James Campbell</b> | Director</h2>
+				<p>Short bio goes here</p>
+				<p><b>Email:</b> james@pendulumadvisors.com</p>
 			</div>
 		</div>
 		<div class="row">
@@ -104,55 +101,58 @@
 				<img src="/images/GerardPacak.jpg" alt="..." class="teamImg">
 			</div>
 			<div class="col-md-9" >
-				<h2> <b>Gerard Pacak</b> | Director</h2>
-				<p> Gerard completed his B.Comm management studies followed by Honors in Financial Analysis and Portfolio Management at UCT, graduating in 2014. He passed CFA level 1 before moving to the UK for year, where he worked at Saracens RFC in the marketing team for 5 months. In January 2015, Gerard moved back to South Africa to join Pendulum Advisors, a boutique assisting clients with their investment decisions.</p>
-				<p> <b>Email:</b> gerard@pendulumadvisors.com </p>
+				<h2><b>Gerard Pacak</b> | Director</h2>
+				<p>Gerard completed his B.Comm management studies followed by Honors in Financial Analysis and Portfolio Management at UCT, graduating in 2014. He passed CFA level 1 before moving to the UK for year, where he worked at Saracens RFC in the marketing team for 5 months. In January 2015, Gerard moved back to South Africa to join Pendulum Advisors, a boutique assisting clients with their investment decisions.</p>
+				<p><b>Email:</b> gerard@pendulumadvisors.com </p>
 			</div>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-md-3">
-				<img src="/images/DanielShaw2.jpg" alt="..." class="internsImg">
-				<h3><b>Daniel Shaw</b> | Agriculture Analyst</h3>
-				<p> Short bio goes here</p>
-			</div>
-			<div class="col-md-3">
-				<img src="/images/FrederickChola.jpg" alt="..." class="internsImg">
-				<h3> <b>Fredrick Chola</b> | Intern '16</h3>
-				<p> University of Cape Town</p>
-			</div>
-			<div class="col-md-3">
-				<img src="/images/Tatenda.jpg" alt="..." class="internsImg">
-				<h3> <b>Tatenda Chikombero</b> | Intern'16</h3>
-				<p> University of South Africa </p>
-			</div>
-		
-			<div class="col-md-3">
-				<img src="/images/BryanWindsor.jpg" alt="..." class="internsImg">
-				<h3> <b>Bryan Windsor</b> | Intern Summer '16</h3>
-				<p> Princeton University </p>
+			<div class="intern">
+				<div class="col-md-3">
+					<img src="/images/DanielShaw2.jpg" alt="..." class="internsImg">
+					<h3><b>Daniel Shaw</b> | Agriculture Analyst</h3>
+					<p>University of Stellenbosch</p>
+				</div>
+				<div class="col-md-3">
+					<img src="/images/FrederickChola.jpg" alt="..." class="internsImg">
+					<h3><b>Fredrick Chola</b> | Intern '16</h3>
+					<p>University of Cape Town</p>
+				</div>
+				<div class="col-md-3">
+					<img src="/images/Tatenda.jpg" alt="..." class="internsImg">
+					<h3><b>Tatenda Chikombero</b> | Intern '16</h3>
+					<p>University of South Africa </p>
+				</div>
+			
+				<div class="col-md-3">
+					<img src="/images/BryanWindsor.jpg" alt="..." class="internsImg">
+					<h3><b>Bryan Windsor</b> | Intern Summer '16</h3>
+					<p>Princeton University </p>
+				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-3">
-				<img src="/images/JohnnyGrassi.jpg" alt="..." class="internsImg">
-				<h3> <b>Johnny Grassi</b> | Intern Summer '16</h3>
-				<p> University of Virginia </p>
-			</div>
-			<div class="col-md-3">
-				<img src="/images/ParkerSmith1.jpg" alt="..." class="internsImg">
-				<h3> <b>Parker Smith</b> | Intern Summer '16</h3>
-				<p> University of North Carolina </p>
-			</div>
-			<div class="col-md-3">
-				<img src="/images/JodieRyu1.jpg" alt="..." class="internsImg">
-				<h3> <b>Jodie Ryu</b> | Intern Summer '16</h3>
-				<p> University of Virginia </p>
-			</div>
-			<div class="col-md-3">
-				<img src="" alt="" class="internsImg">
-				
+			<div class="intern">
+				<div class="col-md-3">
+					<img src="/images/JohnnyGrassi.jpg" alt="..." class="internsImg">
+					<h3><b>Johnny Grassi</b> | Intern Summer '16</h3>
+					<p>University of Virginia</p>
+				</div>
+				<div class="col-md-3">
+					<img src="/images/ParkerSmith1.jpg" alt="..." class="internsImg">
+					<h3><b>Parker Smith</b> | Intern Summer '16</h3>
+					<p>University of North Carolina </p>
+				</div>
+				<div class="col-md-3">
+					<img src="/images/JodieRyu1.jpg" alt="..." class="internsImg">
+					<h3><b>Jodie Ryu</b> | Intern Summer '16</h3>
+					<p>University of Virginia </p>
+				</div>
+				<div class="col-md-3">
+					<img src="" alt="" class="internsImg">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -169,7 +169,7 @@
 					<div class="caption">
 						<h4>Thumbnail Headline</h4>
 						<p>short thumbnail description</p>
-						<a href="" class="label label-danger">Zoom</a>
+						<!-- <a href="/images/IMG_2041.jpg" class="label label-danger">Zoom</a> -->
 					</div>
 						<img src="/images/IMG_2041.jpg" alt="...">
 				</div>
@@ -177,7 +177,6 @@
 					<div class="caption">
 						<h4>Thumbnail Headline</h4>
 						<p>short thumbnail description</p>
-						<a href="" class="label label-danger">Zoom</a>					
 					</div>
 						<img src="/images/redwall.jpg" alt="...">
 				</div>
@@ -188,7 +187,6 @@
 					<div class="caption">
 						<h4>Thumbnail Headline</h4>
 						<p>short thumbnail description</p>
-						<a href="" class="label label-danger">Zoom</a>
 					</div>
 						<img src="/images/meeting.jpg" alt="...">
 				</div>
@@ -196,7 +194,6 @@
 					<div class="caption">
 						<h4>Thumbnail Headline</h4>
 						<p>short thumbnail description</p>
-						<a href="" class="label label-danger">Zoom</a>
 					</div>
 						<img src="/images/IMG_2043.jpg" alt="...">
 				</div>
@@ -207,7 +204,6 @@
 					<div class="caption">
 						<h4>Thumbnail Headline</h4>
 						<p>short thumbnail description</p>
-						<a href="" class="label label-danger">Zoom</a>
 					</div>
 						<img src="/images/library.jpg" alt="...">
 				</div>
@@ -215,7 +211,6 @@
 					<div class="caption">
 						<h4>Thumbnail Headline</h4>
 						<p>short thumbnail description</p>
-						<a href="" class="label label-danger">Zoom</a>
 					</div>
 						<img src="/images/plants.jpg" alt="...">
 				</div>

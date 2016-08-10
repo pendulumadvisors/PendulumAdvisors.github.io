@@ -160,24 +160,9 @@
 	/*font-size: 50px;*/
 	font-weight: normal;
 }
-.researchList {
-	text-align: center;
-	font-family: "Avenir Next";
-	font-size: 18px;
-}
-.btn-default {
-	background-color: #d84727;
-	color: white;
-	font-family: "Avenir Next";
-	font-size: 15px;
-	font-weight: 100;
-	text-transform: uppercase;
-}
-
 .InternalResearchBackground {
-	background: url(/images/IMG_2135.jpg) no-repeat center center;
+	background: url(/images/woodpanel.jpg);
 	background-size: cover;
-	text-align: center;
 	margin-top: 100px;
 	width: 100%;
 	height: 100vh;
@@ -196,20 +181,25 @@
 	padding-left: 60px;
 	padding-right: 20px;
 }
-.researchList p {
-	position: absolute;
-	margin-top: 100px;
-	z-index: 2;
-	right: -50px;
-	width: 50%;
-	padding: 2px;
-	background-color: white;
-	opacity: 0.8;
+.browse-list-right {
 	font-family: "Avenir Next";
+	font-size: 18px;
 	font-weight: normal;
-	/*text-transform: uppercase;*/
-	text-align: center;
-	color: black;
+	text-align: right;
+	padding-right: 100px;
+	margin-left: 40%;
+	background-color: white;
+	opacity: 0.9;
+}
+.browse-list button {
+	background-color: #d84727;
+	font-family: "Avenir Next";
+	font-size: 15px;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+.browse-list a {
+	color: white;
 }
 
 /*-- External Research --*/
@@ -234,7 +224,7 @@
 .books-background {	
 	background: url(/images/favoritebooks.jpg) no-repeat center center;
 	background-size: cover;
-	margin-left: 10%;
+	margin-left: 25%;
 	height: 780px;
 	width: 550px;
 	position: relative;
@@ -245,97 +235,83 @@
 .SteveJobs {
 	width: 10%;
 	height: 30%;
-	border: 1px solid red;
 	margin-left: 50px;
 	position: absolute;
 }
 .ElonMusk {
 	width: 5%;
 	height: 30%;
-	border: 1px solid orange;
 	margin-left: 108px;
 	position: absolute;
 }
 .DethroningTheKing {
 	width: 5%;
 	height: 30%;
-	border: 1px solid yellow;
 	margin-left: 136px;
 	position: absolute;
 }
 .TheOutsiders {
 	width: 4%;
 	height: 30%;
-	border: 1px solid green;
 	margin-left: 165px;
 	position: absolute;
 }
 .ColdSteel {
 	width: 4%;
 	height: 30%;
-	border: 1px solid blue;
 	margin-left: 186px;
 	position: absolute;
 }
-.SteveJobs:hover:after {
-	content: 'hi';
+.MrChina {
+	width: 4%;
+	height: 30%;
+	margin-left: 210px;
+	position: absolute;
 }
-.content {
+.TheBlackSwan {
+	width: 4%;
+	height: 30%;
+	margin-left: 233px;
+	position: absolute;
+}
+.Innovators {
+	width: 6%;
+	height: 30%;
+	margin-left: 255px;
+	position: absolute;
+}
+.Originals {
+	width: 4%;
+	height: 30%;
+	margin-left: 289px;
+	position: absolute;
+}
+.DeepValueInvesting {
+	width: 3%;
+	height: 30%;
+	margin-left: 311px;
+	position: absolute;
+}
+.SteveJobs:hover, .ElonMusk:hover, .DethroningTheKing:hover, .TheOutsiders:hover , .ColdSteel:hover,
+.MrChina:hover, .TheBlackSwan:hover, .Innovators:hover, .Originals:hover, .DeepValueInvesting:hover
+ {
+	background-color: black;
+	opacity: 0.5;
+}
+
+/*.content {
+	background: url(/images/Steve_Jobs_by_Walter_Isaacson.jpg) no-repeat center center;
 	border: 2px solid white;
 	position: absolute;
 	width: 40%;
 	height: 30%;
 	margin-top: -700px;
 	margin-left: 720px;
-}
+	display: none;
+}*/
 
 /* -- Bookshelf funsies-- */
-.lightbox-bg {
-	/* this should cover the entire screen with a transparent black background */
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	background: rgba(0,0,0,.5);
-	z-index: 600;
-}
 
-.lightbox-contents {
-	/* this should center the image on the screen on top of the background*/
-	position: relative;
-	display: block;
-    margin-top: -55%;
-    margin-left: 40%;
-    width: 40%;
-    z-index: 1000; 
-}
-.lightbox-contents2 {
-	/* this should center the image on the screen on top of the background*/
-	position: relative;
-	display: block;
-    margin-top: -55%;
-    margin-left: 40%;
-    width: 40%;
-    z-index: 1000; 
-}
-
-.lightbox {
-	/* this should not be on the screen to start*/
-	/*transform: translate(100%,0); */
-	/* note: this transform moves it off screen
-	inside the parentheses corresponds to 
-	(screen width, screen height)
-	*/
-	display: none;
-}
-
-.isVisible {
-	/* this does exactly what it sounds like it does */
-	/*transform: translate(0%, 0);*/
-	/* this transform moves it back onto the screen */
-	display: block;
-}
 
 /*-- Favorite Articles --*/
 .ArticlesBackground {

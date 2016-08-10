@@ -60,7 +60,6 @@ app.config(function($routeProvider, $locationProvider) {
 		templateUrl: 'templates/podcasts.html' 
 	});
 	$routeProvider.when('/favoriteBooks', {
-      controller: 'FavoriteBooksCtrl',
 		templateUrl: 'templates/favoriteBooks.html'
 	});
 	$routeProvider.when('/favoriteArticles', {
@@ -244,26 +243,5 @@ app.controller("SignupCtrl", function($scope, $firebaseAuth, $firebaseObject, $f
    };
 });
 
-/* -- For bookshelf funsies -- */
-app.controller("FavoriteBooksCtrl", function($scope) {
-   function toggleImage() {
-   document.getElementById("lightbox").classList.add("isVisible");
-   }
-   function closeMenu() {
-   document.getElementById("lightbox").classList.remove('isVisible');
-   }
-   document.getElementById("SteveJobs").onclick = function() {
-   toggleImage();
-   };
-   document.getElementById('lightbox').onclick = function() {
-   closeMenu();
-   };
-   document.getElementById("ElonMusk").onclick = function() {
-   toggleImage();
-   };
-   document.getElementById('lightbox').onclick = function() {
-   closeMenu();
-   };
-});
 
 
