@@ -1,19 +1,22 @@
-<h1> Uploading Research </h1>
-<p> These uploads by the admin will show on internalresearch.html where the clients can then download the files</p>
+<div class="adminPage">
+	<h2>Uploading Research</h2>
+	<p>Enter the name of the file/research with a short description.</p>
+	<p>Then press upload.</p>
+	<p>After the file is successfully uploaded, the page will redirect to where the files can be viewed.</p>
 
-<form ng-submit="upload()">
-	<h6>Name of file: </h6>
-	<input ng-model="pdfName" type="text"/>
+	<form ng-submit="upload()">
+		<h6>Name of file: </h6>
+		<input ng-model="pdfName" type="text"/>
 
-	<h6>Short description of the file.</h6>
-	<textarea ng-model="pdfDescription"></textarea>
+		<h6>Short description of the file.</h6>
+		<textarea ng-model="pdfDescription"></textarea>
 
-	<input id="file-selector" type="file">
-	<button class="upload-button" type="submit">
-		<h4>upload</h4>
-	</button>
+		<input id="file-selector" type="file">
+		<button class="upload-button" type="submit">
+			<h5>upload</h5>
+		</button>
+	</form>
 
-	<h6>File URL:</h6>
-    <span id="linkbox"></span>
-</form>
-
+	<h2>Creating a client</h2>
+	<a href="#/signup">Click here to create a client</a>
+</div>

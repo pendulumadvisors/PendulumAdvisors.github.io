@@ -411,3 +411,16 @@
 		opacity: 0;
 	}
 }
+
+/*-- Style the Admin --*/
+.adminPage {
+	text-align: center;
+}
+#file-selector {
+	margin: 0px auto;
+	display: block;
+	padding-left: 100px;
+}
+.signup-box {
+	text-align: center;
+}

@@ -208,8 +208,8 @@ app.controller('MainCtrl', function($scope, $firebaseAuth, $firebaseObject, $fir
 
    $scope.authObj = $firebaseAuth();
    $scope.currentUser = $scope.authObj.$getAuth();
-   var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
-      $scope.currentUserData = $firebaseObject(userRef);
+   // var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
+   //    $scope.currentUserData = $firebaseObject(userRef);
    var pdfsRef = firebase.database().ref().child("pdfs").child($scope.currentUser.uid);
       $scope.pdfs = $firebaseArray(pdfsRef);
 });
