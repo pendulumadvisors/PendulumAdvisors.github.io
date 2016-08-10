@@ -224,7 +224,7 @@
 .books-background {	
 	background: url(/images/favoritebooks.jpg) no-repeat center center;
 	background-size: cover;
-	margin-left: 25%;
+	margin-left: 13%;
 	height: 780px;
 	width: 550px;
 	position: relative;
@@ -298,17 +298,22 @@
 	background-color: black;
 	opacity: 0.5;
 }
-
-/*.content {
-	background: url(/images/Steve_Jobs_by_Walter_Isaacson.jpg) no-repeat center center;
+.content {
+	/*background: url(/images/Steve_Jobs_by_Walter_Isaacson.jpg) no-repeat center center;*/
 	border: 2px solid white;
 	position: absolute;
-	width: 40%;
+	width: 20%;
 	height: 30%;
 	margin-top: -700px;
-	margin-left: 720px;
+	margin-left: 70%;
 	display: none;
-}*/
+}
+.SteveJobs:hover + .content {
+	display: block;
+}
+.hovertest:hover + .content {
+	display: block;
+}
 
 /*-- Favorite Articles --*/
 .ArticlesBackground {

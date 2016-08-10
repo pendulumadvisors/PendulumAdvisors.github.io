@@ -307,11 +307,10 @@
 }
 .closedsafe p {
 	margin-top: 98%;
-	margin-left: 15%;
+	margin-left: 13%;
 	font-size: 15px;
 	color: white;
 	text-align: center;
-	text-transform: uppercase;
 	position: absolute;
 }
 .loginpage a {
