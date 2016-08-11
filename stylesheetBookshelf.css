@@ -399,3 +399,15 @@
 .ArticlesBackground {
 
 }
+.articlesBox {
+	margin-top: 100px;
+	width: 100vw;
+	position: absolute;
+	padding-left: 120px;
+	border: 2px solid orange;
+	font-family: "Avenir Next";
+}
+.articles-list a {
+	color: black;
+	font-size: 20px;
+}

@@ -49,6 +49,9 @@ app.config(function($routeProvider, $locationProvider) {
    $routeProvider.when("/gallery", {
       templateUrl: "templates/gallery.html"
    });
+   $routeProvider.when("/disclaimer", {
+      templateUrl: "templates/disclaimer.html"
+   });
    $routeProvider.when("/research", {
       templateUrl: "templates/research.html"
    });
@@ -63,6 +66,7 @@ app.config(function($routeProvider, $locationProvider) {
 		templateUrl: 'templates/favoriteBooks.html'
 	});
 	$routeProvider.when('/favoriteArticles', {
+      controller: 'ArticlesCtrl',
 		templateUrl: 'templates/favoriteArticles.html'
 	});
 });
@@ -195,6 +199,29 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
       });
    };
 
+   $scope.uploadArticles = function() {
+      $scope.authObj = $firebaseAuth();
+      $scope.currentUser = $scope.authObj.$getAuth();
+
+      var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
+      $scope.currentUserData = $firebaseObject(userRef);
+      $scope.currentUserData.$loaded().then(function() {
+         var articlesRef = firebase.database().ref().child("favouriteArticles");
+         $scope.articles = $firebaseArray(articlesRef);
+         $scope.articles.$loaded().then(function() {
+            $scope.articles.$add({
+               admin_id: $scope.currentUser.uid,
+               article_name: $scope.articleName,
+               article_description: $scope.articleDescription,
+               article_url: $scope.article_url
+            });
+
+            console.log("Article added to database");
+            $window.location.href = "#/favoriteArticles";
+         });
+      });
+   };
+
    // $scope.uploadExternal = function() {
    //    $scope.authObj = $firebaseAuth();
    //    $scope.currentUser = $scope.authObj.$getAuth();
@@ -285,6 +312,14 @@ app.controller('ExternalResearchCtrl', function($scope, $firebaseAuth, $firebase
    //    $scope.currentUserData = $firebaseObject(userRef);
    var pdfsExternalResearchRef = firebase.database().ref().child("pdfsExternalResearch");
       $scope.pdfsExternalResearch = $firebaseArray(pdfsExternalResearchRef);
+});
+
+/* -- Controller for Articles page -- */
+app.controller('ArticlesCtrl', function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location) {
+   // var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
+   //    $scope.currentUserData = $firebaseObject(userRef);
+   var articlesRef = firebase.database().ref().child("favouriteArticles");
+      $scope.articles = $firebaseArray(articlesRef);
 });
 
 app.controller("SignupCtrl", function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $window) {

@@ -2,4 +2,16 @@
 	<div class="heading">
 		<p>Favourite Articles</p>
 	</div>
+	<!-- Start of articles list -->
+		<div class="articlesBox">
+			<div class="articles-list" ng-repeat="article in articles track by $index">
+				<div class="articles-row">
+					<a href="{{ article.article_url }}">{{article.article_name}}</a>
+				</div>
+				<div>
+				{{article.article_description}}
+				</div>
+			</div>
+		</div>
+	<!-- End of list -->	
 </div>
