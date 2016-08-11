@@ -10,7 +10,7 @@
 	text-align: center;
 	margin: 0px auto;
 	height: 100vh;
-	width: 430px;
+	width: 600px;
 	position: relative;
 }
 .wall-background a {
@@ -21,14 +21,14 @@
 	text-decoration: none;
 }
 .bookshelfRow1 {
-	padding-top: 5%;
+	padding-top: 4%;
 }
 .shelf1 {
-	padding-top: 5%;
-	width: 41%;
-	height: 22%;
-	margin-left: 20px;
-	position: absolute;
+	padding: 7%;
+	width: 38%;
+	height: 100%;
+	margin-left: 10%;
+	/*position: absolute;*/
 	opacity: 0;
 	border: 1px solid white;
 	transition: all 0.3s ease-in-out;
@@ -38,11 +38,12 @@
 	background: rgba(0, 0, 0, 0.7);
 }
 .shelf2 {
-	padding-top: 5%;
-	width: 41%;
-	height: 22%;
-	margin-left: 240px;
-	position: absolute;
+	margin-top: -180px;
+	padding: 8%;
+	width: 36%;
+	height: 100%;
+	margin-left: 55%;
+	/*position: absolute;*/
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
 	border: 1px solid white;
@@ -52,14 +53,14 @@
 	background: rgba(0, 0, 0, 0.7);
 }
 .bookshelfRow2 {
-	padding-top: 35%;
+	margin-top: 3%;
 }
 .shelf3 {
-	padding-top: 10%;
-	width: 41%;
+	padding: 10%;
+	width: 37%;
 	height: 22%;
-	margin-left: 20px;
-	position: absolute;
+	margin-left: 10%;
+	/*position: absolute;*/
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
 	border: 1px solid white;
@@ -69,11 +70,12 @@
 	background: rgba(0, 0, 0, 0.7);
 }
 .shelf4and5 {
-	padding-top: 10%;
-	width: 41%;
-	height: 45%;
-	margin-left: 240px;
-	position: absolute;
+	margin-top: -170px;
+	padding: 10%;
+	width: 35%;
+	height: 360px;
+	margin-left: 55%;
+	/*position: absolute;*/
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
 	border: 1px solid white;
@@ -83,14 +85,15 @@
 	background: rgba(0, 0, 0, 0.7);
 }
 .bookshelfRow3 {
-	padding-top: 35%;
+	padding-top: 5%;
 }
 .shelf6 {
-	padding-top: 5%;
-	width: 41%;
+	margin-top: -170px;
+	padding: 7%;
+	width: 37%;
 	height: 22%;
-	margin-left: 20px;
-	position: absolute;
+	margin-left: 10%;
+	/*position: absolute;*/
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
 	border: 1px solid white;
@@ -100,12 +103,12 @@
 	background: rgba(0, 0, 0, 0.7);
 }
 .lastshelf {
+	margin-top: 3%;
+	margin-left: 10%;
 	padding-top: 5%;
-	margin-top: 35%;
-	width: 88%;
+	width: 78%;
 	height: 20%;
-	margin-left: 20px;
-	position: absolute;
+	/*position: absolute;*/
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
 	border: 1px solid white;
@@ -114,19 +117,96 @@
 	opacity: 1;
 	background: rgba(0, 0, 0, 0.7);
 }
-.return a {
-	text-transform: uppercase;
-	font-weight: 100;
-	position: absolute;
-	top: 40px;
-	left: 40px;
-	width: 250px;
+.return img {
+	width: 5%;
+	height: auto;
+	float: left;
+	margin: -100px 0px 0px 50px;
 }
 @media (max-width: 968px) {
 	.return a {
 		font-size: 20px;
 		left: 5px;
 		width: 100px;
+	}
+}
+@media(max-width: 1279px) {
+	.wall-background a {
+	font-size: 20px;
+	font-family: "Avenir Next";
+	font-weight: 100;
+	color: white;
+	text-decoration: none;
+	}
+	.bookshelfRow1 {
+		padding-top: 3%;
+	}
+	.shelf1 {
+		width: 30%;
+		height: 100%;
+		margin-left: 18%;
+		/*position: absolute;*/
+		opacity: 0;
+		border: 1px solid white;
+		transition: all 0.3s ease-in-out;
+	}
+	.shelf2 {
+		margin-top: -140px;
+		width: 30%;
+		height: 100%;
+		margin-left: 54%;
+		/*position: absolute;*/
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		border: 1px solid white;
+	}
+	.bookshelfRow2 {
+		margin-top: -6px;
+	}
+	.shelf3 {
+		width: 30%;
+		height: 100%;
+		margin-left: 18%;
+		/*position: absolute;*/
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		border: 1px solid white;
+	}
+	.shelf4and5 {
+		margin-top: -150px;
+		padding: 10%;
+		width: 30%;
+		height: 280px;
+		margin-left: 54%;
+		/*position: absolute;*/
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		border: 1px solid white;
+	}
+	.bookshelfRow3 {
+		padding-top: 5%;
+	}
+	.shelf6 {
+		margin-top: -125px;
+		padding: 5%;
+		width: 30%;
+		height: 100%;
+		margin-left: 17%;
+		/*position: absolute;*/
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		border: 1px solid white;
+	}
+	.lastshelf {
+		margin-top: 5%;
+		margin-left: 18%;
+		padding-top: 5%;
+		width: 64%;
+		height: 20%;
+		/*position: absolute;*/
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		border: 1px solid white;
 	}
 }
 

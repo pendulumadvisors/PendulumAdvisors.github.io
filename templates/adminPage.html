@@ -1,21 +1,53 @@
 <div class="adminPage">
-	<h2>Uploading Research</h2>
+	<h2>Uploading on Internal Research</h2>
 	<p>Enter the name of the file/research with a short description.</p>
 	<p>Then press upload.</p>
 	<p>After the file is successfully uploaded, the page will redirect to where the files can be viewed.</p>
 
-	<form ng-submit="upload()">
+	<form ng-submit="uploadInternal()">
 		<h6>Name of file: </h6>
-		<input ng-model="pdfName" type="text"/>
+		<input ng-model="pdfInternalResearchName" type="text"/>
 
 		<h6>Short description of the file.</h6>
-		<textarea ng-model="pdfDescription"></textarea>
+		<textarea ng-model="pdfInternalResearchDescription"></textarea>
 
 		<input id="file-selector" type="file">
 		<button class="upload-button" type="submit">
 			<h5>upload</h5>
 		</button>
 	</form>
+
+	<!-- <h2>Uploading on External Research</h2>
+
+	<form ng-submit="uploadExternal()">
+		<h6>Name of file: </h6>
+		<input ng-model="pdfExternalResearchName" type="text"/>
+
+		<h6>Short description of the file.</h6>
+		<textarea ng-model="pdfExternalResearchDescription"></textarea>
+
+		<input id="file-selector" type="file">
+		<button class="upload-button" type="submit">
+			<h5>upload</h5>
+		</button>
+	</form> -->
+
+	<h2>Uploading Favorite Articles</h2>
+
+	<form ng-submit="uploadArticles()">
+		<h6>Name of Article: </h6>
+		<input ng-model="articleName" type="text"/>
+
+		<h6>Short description of the article</h6>
+		<textarea ng-model="articleDescription"></textarea>
+
+		<h6>Paste article link here: </h6>
+		<input ng-model="" type="url">
+		<button class="upload-button" type="submit">
+			<h5>upload</h5>
+		</button>
+	</form>
+
 
 	<h2>Creating a client</h2>
 	<a href="#/signup">Click here to create a client</a>

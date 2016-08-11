@@ -22,9 +22,8 @@ app.config(function($routeProvider, $locationProvider) {
             "currentAuth": function($firebaseAuth) {
             return $firebaseAuth().$requireSignIn();
             }
-         }
-
-   })
+      }
+   });
 	$routeProvider.when("/login", {
 	   templateUrl: "templates/login.html",
 		controller: "LoginCtrl"
@@ -54,6 +53,7 @@ app.config(function($routeProvider, $locationProvider) {
       templateUrl: "templates/research.html"
    });
 	$routeProvider.when('/ExternalResearch', {
+      controller: 'ExternalResearchCtrl',
 		templateUrl: 'templates/ExternalResearch.html'
 	});
 	$routeProvider.when('/podcasts', {
@@ -156,7 +156,7 @@ app.controller('LoginCtrl', function($scope, $firebaseObject, $firebaseAuth, $fi
 /* -- Controller for adminPage.html -- */
 app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $firebaseObject, $firebaseArray, $window) {
    
-   $scope.upload = function() {
+   $scope.uploadInternal = function() {
       $scope.authObj = $firebaseAuth();
       $scope.currentUser = $scope.authObj.$getAuth();
       var file = document.getElementById("file-selector").files[0];
@@ -166,7 +166,7 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
          var data = event.target.result;
       }
       r.readAsBinaryString(file);
-      var storageRef = firebase.storage().ref("pdfs/" + file.name);
+      var storageRef = firebase.storage().ref("pdfsInternalResearch/" + file.name);
       var uploadTask = storageRef.put(file);
       uploadTask.on("state_changed", function(snapshot) {
 
@@ -178,13 +178,13 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
          var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
          $scope.currentUserData = $firebaseObject(userRef);
          $scope.currentUserData.$loaded().then(function() {
-            var pdfsRef = firebase.database().ref().child("pdfs").child($scope.currentUser.uid);
-            $scope.pdfs = $firebaseArray(pdfsRef);
-            $scope.pdfs.$loaded().then(function() {
-               $scope.pdfs.$add({
+            var pdfsInternalResearchRef = firebase.database().ref().child("pdfsInternalResearch");
+            $scope.pdfsInternalResearch = $firebaseArray(pdfsInternalResearchRef);
+            $scope.pdfsInternalResearch.$loaded().then(function() {
+               $scope.pdfsInternalResearch.$add({
                   admin_id: $scope.currentUser.uid,
-                  pdf_name: $scope.pdfName,
-                  pdf_description: $scope.pdfDescription,
+                  pdf_name: $scope.pdfInternalResearchName,
+                  pdf_description: $scope.pdfInternalResearchDescription,
                   pdf_image: downloadURL
                });
 
@@ -195,6 +195,69 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
       });
    };
 
+   // $scope.uploadExternal = function() {
+   //    $scope.authObj = $firebaseAuth();
+   //    $scope.currentUser = $scope.authObj.$getAuth();
+   //    var file = document.getElementById("file-selector").files[0];
+   //    e = new FileReader();
+   //    console.log(file);
+   //    e.onloadend = function(event) {
+   //       var data = event.target.result;
+   //    }
+   //    e.readAsBinaryString(file);
+   //    var storageRef = firebase.storage().ref("pdfsExternalResearch/" + file.name);
+   //    var uploadTask = storageRef.put(file);
+   //    uploadTask.on("state_changed", function(snapshot) {
+
+   //    }, function(error) {
+
+   //    }, function() {
+   //       var downloadURL = uploadTask.snapshot.downloadURL;
+
+   //       var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
+   //       $scope.currentUserData = $firebaseObject(userRef);
+   //       $scope.currentUserData.$loaded().then(function() {
+   //          var pdfsExternalResearchRef = firebase.database().ref().child("pdfsExternalResearch");
+   //          $scope.pdfsExternalResearch = $firebaseArray(pdfsExternalResearchRef);
+   //          $scope.pdfsExternalResearch.$loaded().then(function() {
+   //             $scope.pdfsExternalResearch.$add({
+   //                admin_id: $scope.currentUser.uid,
+   //                pdf_name: $scope.pdfExternalResearchName,
+   //                pdf_description: $scope.pdfExternalResearchDescription,
+   //                pdf_image: downloadURL
+   //             });
+
+   //             console.log("PDF added to storage");
+   //             $window.location.href = "#/ExternalResearch";
+   //          });
+   //       });
+   //    });
+   // };
+   
+   // $scope.uploadPodcasts = function() {
+   //    $scope.authObj = $firebaseAuth();
+   //    $scope.currentUser = $scope.authObj.$getAuth();
+
+   //    var downloadURL = uploadTask.snapshot.downloadURL;
+
+   //    var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
+   //    $scope.currentUserData = $firebaseObject(userRef);
+   //    $scope.currentUserData.$loaded().then(function() {
+   //       var pdfsRef = firebase.database().ref().child("Podcasts");
+   //       $scope.pdfs = $firebaseArray(pdfsRef);
+   //       $scope.pdfs.$loaded().then(function() {
+   //          $scope.pdfs.$add({
+   //             admin_id: $scope.currentUser.uid,
+   //             pdf_name: $scope.pdfName,
+   //             pdf_description: $scope.pdfDescription,
+   //             pdf_image: downloadURL
+   //          });
+
+   //          console.log("PDF added to storage");
+   //          $window.location.href = "#/ExternalResearch";
+   //       });
+   //    });
+   // };
 });
 
 /* -- Controller for main.html (for clients)-- */
@@ -210,8 +273,18 @@ app.controller('MainCtrl', function($scope, $firebaseAuth, $firebaseObject, $fir
    $scope.currentUser = $scope.authObj.$getAuth();
    // var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
    //    $scope.currentUserData = $firebaseObject(userRef);
-   var pdfsRef = firebase.database().ref().child("pdfs").child($scope.currentUser.uid);
-      $scope.pdfs = $firebaseArray(pdfsRef);
+   var pdfsInternalResearchRef = firebase.database().ref().child("pdfsInternalResearch");
+      $scope.pdfsInternalResearch = $firebaseArray(pdfsInternalResearchRef);
+});
+
+/* -- Controller for External Research page -- */
+app.controller('ExternalResearchCtrl', function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location) {
+   $scope.authObj = $firebaseAuth();
+   $scope.currentUser = $scope.authObj.$getAuth();
+   // var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
+   //    $scope.currentUserData = $firebaseObject(userRef);
+   var pdfsExternalResearchRef = firebase.database().ref().child("pdfsExternalResearch");
+      $scope.pdfsExternalResearch = $firebaseArray(pdfsExternalResearchRef);
 });
 
 app.controller("SignupCtrl", function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $window) {

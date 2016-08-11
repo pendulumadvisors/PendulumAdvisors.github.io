@@ -191,7 +191,7 @@
     position:absolute;
     top:-100%;
     right:0;
-    background:rgba(66, 139, 202, 0.75);
+    background:rgba(216, 71, 39, 0.75);
     width:100%;
     height:100%;
     padding:2%;
@@ -231,18 +231,11 @@
     list-style:none;
     margin-top: 65px;
 }
-.galleryreturn {
-	font-family: "Avenir Next";
-	font-size: 30px;
-	font-weight: 100;
-	text-transform: uppercase;
-	text-align: center;
-	position: absolute;
-	margin: 0px auto;
-	display: block;
-}
-.galleryreturn a {
-	color: black;
+.galleryreturn img {
+	width: 5%;
+	height: auto;
+	float: left;
+	margin: 0px 0px 0px 50px;
 }
 
 /*-- Footer --*/
@@ -420,6 +413,10 @@
 	display: block;
 	padding-left: 100px;
 }
+.upload-button {
+	margin: 10px;
+}
 .signup-box {
 	text-align: center;
 }
+
