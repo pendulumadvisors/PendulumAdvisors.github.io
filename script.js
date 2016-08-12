@@ -316,7 +316,7 @@ app.controller('favoriteBooksCtrl', function($scope, $location) {
       class: 'SteveJobs',
       title: 'Steve Jobs',
       author: 'Walter Isaacson',
-      summary: 'Based on more than forty interviews with Steve Jobs conducted over two years—as well as interviews with more than 100 family members, friends, adversaries, competitors, and colleagues—Walter Isaacson has written a riveting story of the roller-coaster life and searingly intense personality of a creative entrepreneur whose passion for perfection and ferocious drive revolutionized six industries: personal computers, animated movies, music, phones, tablet computing, and digital publishing. Isaacson’s portrait touched millions of readers.'
+      summary: "Based on more than forty interviews with Steve Jobs conducted over two years--as well as interviews with more than 100 family members, friends, adversaries, competitors, and colleagues--Walter Isaacson has written a riveting story of the roller-coaster life and searingly intense personality of a creative entrepreneur whose passion for perfection and ferocious drive revolutionized six industries: personal computers, animated movies, music, phones, tablet computing, and digital publishing. Isaacson's portrait touched millions of readers."
     },
     {
       class:'ElonMusk',
@@ -334,13 +334,121 @@ app.controller('favoriteBooksCtrl', function($scope, $location) {
       class: 'TheOutsiders',
       title: 'The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success',
       author: 'William Thorndike',
-      summary: "What is the hallmark of exceptional CEO performance? In this refreshing, counterintuitive book, author Will Thorndike brings to bear the analytical wisdom of a successful career in investing, closely evaluating the performance of companies and their leaders. You will meet eight individualistic CEOs whose firms’ average returns outperformed the S&P 500 by a factor of twenty—in other words, an investment of $10,000 with each of these CEOs, on average, would have been worth over $1.5 million twenty-five years later. "
+      summary: "What is the hallmark of exceptional CEO performance? In this refreshing, counterintuitive book, author Will Thorndike brings to bear the analytical wisdom of a successful career in investing, closely evaluating the performance of companies and their leaders. You will meet eight individualistic CEOs whose firms' average returns outperformed the S&P 500 by a factor of twenty-in other words, an investment of $10,000 with each of these CEOs, on average, would have been worth over $1.5 million twenty-five years later. "
     },
     {
       class: 'ColdSteel',
       title: 'Cold Steel: Lakshmi Mittal and the Multi-Billion-Dollar Battle for a Global Empire',
       author: 'Tim Bouquet',
-      summary: "When the world's two largest steel producers went head to head in a bitter struggle for market domination, an epic corporate battle ensued that sent shockwaves through the political corridors of Europe, overheated the world's financial markets and transformed the steel industry. Billions of dollars were at stake. At the heart of the battle were two men: Guy Dollé, Chairman and CEO of Luxembourg-based Arcelor, the world's largest steel producer by turnover and Lakshmi Mittal, a self-made Indian industrialist and the richest man in Great Britain. Only one could prevail… "
+      summary: "When the world's two largest steel producers went head to head in a bitter struggle for market domination, an epic corporate battle ensued that sent shockwaves through the political corridors of Europe, overheated the world's financial markets and transformed the steel industry. Billions of dollars were at stake. At the heart of the battle were two men: Guy Dolle, Chairman and CEO of Luxembourg-based Arcelor, the world's largest steel producer by turnover and Lakshmi Mittal, a self-made Indian industrialist and the richest man in Great Britain. Only one could prevail..."
+    },
+    {
+      class: 'MrChina',
+      title: 'Mr China',
+      author: 'Tim Clissold',
+      summary: "The incredible story of a Wall Street banker who went to China with $400,000,000 and learned the hard way how to do business there ...In the early nineties, China finally opened for business and Wall Street wanted in on the act. When the investment bankers arrived from New York with their Harvard MBAs, pinstripes and tasselled loafers, ready to negotiate with the Old Cadres, the stage was set for collision. This is the true story of a tough Wall Street banker who came to China looking for glory. He teamed up with an ex-Red Guard and a Mandarin-speaking Englishman. Together, they raised over $400,000,000 and bought up factories all over China. Only as they watched those millions slide towards the abyss did they start to understand that China really doesn't play by anyone else's rules."
+    },
+    {
+      class: 'TheBlackSwan',
+      title: 'The Black Swan',
+      author: 'Nassim Nicholas Taleb',
+      summary: "A black swan is an event, positive or negative, that is deemed improbable yet causes massive consequences. In this groundbreaking and prophetic book, Taleb shows in a playful way that Black Swan events explain almost everything about our world, and yet we-especially the experts-are blind to them."
+    },
+    {
+      class: 'Innovators',
+      title: 'The Innovators',
+      author: 'Walter Isaacson',
+      summary: "The Innovators is a masterly saga of collaborative genius destined to be the standard history of the digital revolution-and an indispensable guide to how innovation really happens. He explores the fascinating personalities that created our current digital revolution, such as Vannevar Bush, Alan Turing, John von Neumann, J.C.R. Licklider, Doug Engelbart, Robert Noyce, Bill Gates, Steve Wozniak, Steve Jobs, Tim Berners-Lee, and Larry Page. This is the story of how their minds worked and what made them so inventive. It's also a narrative of how their ability to collaborate and master the art of teamwork made them even more creative. For an era that seeks to foster innovation, creativity, and teamwork."
+    },
+    {
+      class: 'Originals',
+      title: 'Originals: How Non-Conformists Move the World',
+      author: 'Adam Grant',
+      summary: "In Originals Grant addresses the challenge of improving the world, but now from the perspective of becoming original: choosing to champion novel ideas and values that go against the grain, battle conformity, and buck outdated traditions. How can we originate new ideas, policies, and practices without risking it all? Using surprising studies and stories spanning business, politics, sports, and entertainment, Grant explores how to recognize a good idea, speak up without getting silenced, choose the right time to act, and manage fear and doubt; how parents and teachers can nurture originality in children. The payoff is a set of groundbreaking insights about rejecting conformity and improving the status quo."
+    }, 
+    {
+      class: 'DeepValueInvesting',
+      title: 'Deep Value Investing: Finding Bargain with Big Potential',
+      author: 'Jeroen Bos',
+      summary: "Deep Value Investing by Jeroen Bos is an incredibly candid and revealing guide to the secrets of deep value investment. Written by an investor with a long and remarkable track record, it shares for the first time the ins and outs of finding high-potential undervalued stocks before anyone else. Deep value investing means finding companies that are genuine bargains that can pay back phenomenally over the long term. They are firms so cheap that even if they were to close tomorrow their assets would pay you out at a profit. But if they can turn things around, the rewards will be many times greater... Let the market come to you."
+    },
+    {
+      class: 'YourMoneyandYourBrain',
+      title: 'Your Money and Your Brain: How the New Science of Neuroeconomics Can Help Make You Rich',
+      author: 'Jason Zweig',
+      summary: "Drawing on the latest scientific research, Jason Zweig shows what happens in your brain when you think about money and tells investors how to take practical, simple steps to avoid common mistakes and become more successful. What happens inside our brains when we think about money? Quite a lot, actually, and some of it isn't good for our financial health. Zweig, a veteran financial journalist, draws on the latest research in neuroeconomics, a fascinating new discipline that combines psychology, neuroscience, and economics to better understand financial decision making. Your Money and Your Brain offers some radical new insights into investing and shows investors how to take control of the battlefield between reason and emotion."
+    },
+    {
+      class: 'WealthWarWisdom',
+      title: 'Wealth, War and Wisdom',
+      author: 'Barton Biggs',
+      summary: "An intriguing look at how past market wisdom can help you survive and thrive during uncertain times. In Wealth, War & Wisdom, legendary Wall Street investor Barton Biggs reveals how the turning points of World War II intersected with market performance, and shows how these lessons can help the twenty-first-century investor comprehend our own perilous times as well as choose the best strategies for the modern market economy. Biggs skillfully discusses the performance of equities in both victorious and defeated countries, examines how individuals preserved their wealth despite the ongoing battles, and explores whether or not public equities were able to increase in value and serve as a wealth preserver. Biggs also looks at how other assets, including real estate and gold, fared during this dynamic and devastating period, and offers valuable insights on preserving one's wealth for future generations."
+    },
+    {
+      class: 'EverythingIsObvious',
+      title: 'Everything is Obvious: How Common Sense Fails Us',
+      author: 'Duncan Watts',
+      summary: "Drawing on the latest scientific research, along with a wealth of historical and contemporary examples, Watts shows how common sense reasoning and history conspire to mislead us into believing that we understand more about the world of human behavior than we do; and in turn, why attempts to predict, manage, or manipulate social and economic systems so often go awry. Only by understanding how and when common sense fails, Watts argues, can we improve how we plan for the future, as well as understand the present-an argument that has important implications in politics, business, and marketing, as well as in science and everyday life."
+    },
+    {
+      class: 'OneUpOnWallStreet',
+      title: 'One Up On Wall Street: How to Use What You Already Know to Make Money in the Market',
+      author: 'Peter Lynch',
+      summary: "Peter Lynch explains the advantages that average investors have over professionals and how they can use these advantages to achieve financial success. America’s most successful money manager tells how average investors can beat the pros by using what they know. According to Lynch, investment opportunities are everywhere. Lynch offers easy-to-follow advice for sorting out the long shots from the no-shots by reviewing a company’s financial statements and knowing which numbers really count. He offers guidelines for investing in cyclical, turnaround, and fast-growing companies. As long as you invest for the long term, Lynch says, your portfolio can reward you. "
+    }, 
+    {
+      class: 'SimpleButNotEasy',
+      title: 'Simple But Not Easy',
+      author: 'Richard Oldfield',
+      summary: "Simple But Not Easy has plenty of interest to the experienced professional, and is aimed also at the interested amateur investor. The theme of the book is that investment is simpler than non-professionals think it is in that the rudiments can be expressed in ordinary English, and picked up by anybody. It is not a science. But investment is also difficult. Richard Oldfield begins with a candid confession of some of his worst mistakes and what they have taught him. He discusses the different types of investment, why fees matter, and the importance of measuring performance properly. He also outlines what to look for, and what not to look for in an investment manager and when to fire a manager."
+    },
+    {
+      class: 'JohnNeffonInvesting',
+      title: 'John Neff on Investing',
+      author: 'John Neff',
+      summary: "In John Neff on Investing, Neff delineates, for the first time, the principles of his phenomenally successful low p/e approach to investing, and he describes the strategies, techniques, and investment decisions that earned him a place alongside Warren Buffett and Peter Lynch in the pantheon of modern investment wizards. Packed with solid advice and guidance for anyone who aspires to using Neff's unique brand of value investing, John Neff on Investing offers invaluable lessons on using price-earnings ratios as a yardstick, to zeroing in on undervalued stocks, interpreting earnings histories and anticipating new market climates. A narrative of Neff's early days-My Road to Windsor-reveals the extraordinary mindset and humble circumstances that shaped his winning investment philosophy. "
+    }, 
+    {
+      class: 'ContrarianInvestment',
+      title: 'Contrarian Investment Strategies: The Psychological Edge',
+      author: 'David Dreman',
+      summary: "One of the premier investment managers introduces vitally important new findings in psychology that show why most investment strategies are fatally flawed and his contrarian strategies are the best way to beat the market."
+    },
+    {
+      class: 'ZebrainLionCountry',
+      title: 'A Zebra in Lion Country',
+      author: 'Ralph Wanger',
+      summary: "Ralph Wanger explains the principles of investing in small, rapidly growing companies whose stocks represent good value. A Zebra in Lion Country offers an investment philosophy that will carry you through the rough spells and bring you greater wealth over the long term. Wanger displays his irreverent savvy in this guide to locating small company 'value' stocks that will yield well-above-average returns. Wanger shows every investor how to achieve the right balance of safety and risk, and imagination and discipline, to survive and prosper in the investment jungle. Destined to become a classic in the field of investing, A Zebra in Lion Country is as entertaining as it is instructive."
+    }, 
+    {
+      class: 'FinancialFolly',
+      title: 'This Time is Different: Eight Centuries of Financial Folly',
+      author: 'Carmen Reinhart',
+      summary: "Throughout history, rich and poor countries alike have been lending, borrowing, crashing--and recovering--their way through an extraordinary range of financial crises. Each time, the experts have chimed, 'this time is different'--claiming that the old rules of valuation no longer apply and that the new situation bears little similarity to past disasters. With this breakthrough study, leading economists Carmen Reinhart and Kenneth Rogoff definitively prove them wrong. Covering sixty-six countries across five continents, This Time Is Different presents a comprehensive look at the varieties of financial crises, and guides us through eight astonishing centuries of government defaults, banking panics, and inflationary spikes--from medieval currency debasements to today's subprime catastrophe."
+    }, 
+    {
+      class: 'ValueInvesting',
+      title: 'Value Investing: From Graham to Buffett and Beyond',
+      author: 'Bruce Greenwald',
+      summary: "From the 'guru to Wall Street's gurus' comes the fundamental techniques of value investing and their applications. Bruce Greenwald is one of the leading authorities on value investing. Some of the savviest people on Wall Street have taken his Columbia Business School executive education course on the subject. Now this dynamic and popular teacher, with some colleagues, reveals the fundamental principles of value investing, the one investment technique that has proven itself consistently over time. After covering general techniques of value investing, the book proceeds to illustrate their applications through profiles of Warren Buffett, Michael Price, Mario Gabellio, and other successful value investors. A number of case studies highlight the techniques in practice."
+    },
+    {
+      class: 'ZerotoOne',
+      title: 'Zero to One',
+      author: 'Peter Thiel ',
+      summary: "The great secret of our time is that there are still uncharted frontiers to explore and new inventions to create. In Zero to One, legendary entrepreneur and investor Peter Thiel shows how we can find singular ways to create those new things. Thiel begins with the contrarian premise that we live in an age of technological stagnation, even if we’re too distracted by shiny mobile devices to notice. Progress can be achieved in any industry or area of business. It comes from the most important skill that every leader must master: learning to think for yourself. Doing what someone else already knows how to do takes the world from 1 to n, adding more of something familiar. But when you do something new, you go from 0 to 1. Zero to One presents at once an optimistic view of the future of progress in America and a new way of thinking about innovation: it starts by learning to ask the questions that lead you to find value in unexpected places."
+    }, 
+    {
+      class: 'GreatCrash1929',
+      title: 'The Great Crash 1929',
+      author: 'John Galbraith',
+      summary: "Of John Kenneth Galbraith's The Great Crash 1929, the Atlantic Monthly said: 'Economic writings are seldom notable for their entertainment value, but this book is. Galbraith's prose has grace and wit, and he distills a good deal of sardonic fun from the whopping errors of the nation's oracles and the wondrous antics of the financial community.' Originally published in 1955, Galbraith's book became an instant bestseller, and in the years since its release it has become the unparalleled point of reference for readers looking to understand American financial history."
+    }, 
+    {
+      class: 'IntelligentInvestor',
+      title: 'The Intelligent Investor',
+      author: 'Benjamin Graham',
+      summary: "The greatest investment advisor of the twentieth century, Benjamin Graham, taught and inspired people worldwide. Graham's philosophy of 'value investing' -- which shields investors from substantial error and teaches them to develop long-term strategies -- has made The Intelligent Investor the stock market bible ever since its original publication in 1949. Over the years, market developments have proven the wisdom of Graham's strategies. Vital and indispensable, this HarperBusiness Essentials edition of The Intelligent Investor is the most important book you will ever read on how to reach your financial goals."
     }
   ]
   $scope.bookHovered = function(book) {

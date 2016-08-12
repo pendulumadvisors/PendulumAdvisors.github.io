@@ -325,8 +325,95 @@
 	margin-left: 311px;
 	position: absolute;
 }
+.YourMoneyandYourBrain {
+	width: 4%;
+	height: 30%;
+	margin-left: 325px;
+	position: absolute;
+}
+.WealthWarWisdom {
+	width: 4%;
+	height: 30%;
+	margin-left: 350px;
+	position: absolute;
+}
+.EverythingIsObvious {
+	width: 5%;
+	height: 30%;
+	margin-left: 375px;
+	position: absolute;
+}
+.OneUpOnWallStreet {
+	width: 3%;
+	height: 30%;
+	margin-left: 405px;
+	position: absolute;
+}
+.SimpleButNotEasy {
+	width: 3%;
+	height: 30%;
+	margin-left: 420px;
+	position: absolute;
+}
+.JohnNeffonInvesting {
+	width: 3%;
+	height: 30%;
+	margin-left: 443px;
+	position: absolute;
+}
+.ContrarianInvestment {
+	width: 5%;
+	height: 30%;
+	margin-left: 464px;
+	position: absolute;
+}
+.ZebrainLionCountry {
+	width: 3%;
+	height: 30%;
+	margin-left: 494px;
+	position: absolute;
+}
+.FinancialFolly {
+	margin-top: 68%;
+	width: 6%;
+	height: 31%;
+	margin-left: 52px;
+	position: absolute;
+}
+.ValueInvesting {
+	margin-top: 68%;
+	width: 4%;
+	height: 31%;
+	margin-left: 90px;
+	position: absolute;
+}
+.ZerotoOne {
+	margin-top: 68%;
+	width: 3%;
+	height: 31%;
+	margin-left: 110px;
+	position: absolute;
+}
+.GreatCrash1929 {
+	margin-top: 68%;
+	width: 3%;
+	height: 31%;
+	margin-left: 125px;
+	position: absolute;
+}
+.IntelligentInvestor {
+	margin-top: 68%;
+	width: 7%;
+	height: 31%;
+	margin-left: 140px;
+	position: absolute;
+}
+
 .SteveJobs:hover, .ElonMusk:hover, .DethroningTheKing:hover, .TheOutsiders:hover , .ColdSteel:hover,
-.MrChina:hover, .TheBlackSwan:hover, .Innovators:hover, .Originals:hover, .DeepValueInvesting:hover
+.MrChina:hover, .TheBlackSwan:hover, .Innovators:hover, .Originals:hover, .DeepValueInvesting:hover, .YourMoneyandYourBrain:hover,
+.WealthWarWisdom:hover, .EverythingIsObvious:hover, .OneUpOnWallStreet:hover, .SimpleButNotEasy:hover,
+.JohnNeffonInvesting:hover, .ContrarianInvestment:hover, .ZebrainLionCountry:hover, .FinancialFolly:hover,
+.ValueInvesting:hover, .ZerotoOne:hover, .GreatCrash1929:hover, .IntelligentInvestor:hover
  {
 	background-color: black;
 	opacity: 0.5;
@@ -340,12 +427,6 @@
 	margin-left: 60%;
 	color: white;
 	
-}
-.hovertest:hover + .content {
-	display: block;
-}
-.books-background:hover + .content {
-	display: block;
 }
 
 /*-- Favorite Articles --*/

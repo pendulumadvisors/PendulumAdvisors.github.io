@@ -5,20 +5,15 @@
 
 	<div class="books-background">
 		<div class="first-row">
-
 			<div ng-repeat="b in books" ng-class="b.class" ng-mouseenter="bookHovered(b)" ng-mouseleave="bookNotHovered(b)">
 			</div>
-
-			<!-- <div id="SteveJobs" class="SteveJobs" onclick="location.href='https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537';" style="cursor: pointer;">
-			</div> -->
-
 		</div>
 	</div>
 
 	<div class="content">
-		<p>Book title: {{ hoveredBook.title }}</p>
-		<p>Author: {{ hoveredBook.author }}</p>
-		<p>Summary: {{ hoveredBook.summary }}</p>
+		<p>{{ hoveredBook.title }}</p>
+		<p>{{ hoveredBook.author }}</p>
+		<p>{{ hoveredBook.summary }}</p>
 	</div>
 
 	<div class="return">   
