@@ -287,6 +287,7 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
    // };
 });
 
+
 /* -- Controller for main.html (for clients)-- */
 app.controller('MainCtrl', function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location) {
     var auth = $firebaseAuth();
@@ -304,6 +305,7 @@ app.controller('MainCtrl', function($scope, $firebaseAuth, $firebaseObject, $fir
       $scope.pdfsInternalResearch = $firebaseArray(pdfsInternalResearchRef);
 });
 
+
 /* -- Controller for External Research page -- */
 app.controller('ExternalResearchCtrl', function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location) {
    $scope.authObj = $firebaseAuth();
@@ -314,6 +316,7 @@ app.controller('ExternalResearchCtrl', function($scope, $firebaseAuth, $firebase
       $scope.pdfsExternalResearch = $firebaseArray(pdfsExternalResearchRef);
 });
 
+
 /* -- Controller for Articles page -- */
 app.controller('ArticlesCtrl', function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location) {
 
@@ -321,6 +324,7 @@ app.controller('ArticlesCtrl', function($scope, $firebaseAuth, $firebaseObject, 
       $scope.articles = $firebaseArray(articlesRef);
 
 });
+
 
 /* -- -- */
 app.controller("SignupCtrl", function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $window) {

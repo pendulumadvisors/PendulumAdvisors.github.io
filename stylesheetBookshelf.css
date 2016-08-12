@@ -112,6 +112,10 @@
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
 	border: 1px solid white;
+	color: white;
+	font-size: 30px;
+	font-family: "Avenir Next";
+	font-weight: 100;
 }
 .lastshelf:hover {
 	opacity: 1;
@@ -378,8 +382,8 @@
 	background-color: black;
 	opacity: 0.5;
 }
+
 .content {
-	/*background: url(/images/Steve_Jobs_by_Walter_Isaacson.jpg) no-repeat center center;*/
 	border: 2px solid white;
 	position: absolute;
 	width: 20%;
@@ -388,10 +392,10 @@
 	margin-left: 70%;
 	display: none;
 }
-.SteveJobs:hover + .content {
+.hovertest:hover + .content {
 	display: block;
 }
-.hovertest:hover + .content {
+.books-background:hover + .content {
 	display: block;
 }
 

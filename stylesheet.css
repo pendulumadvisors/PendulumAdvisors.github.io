@@ -18,10 +18,6 @@
 	color: gray;
 	border: 2px solid gray;
 }
-.navbar-brand {
-	padding-top: 0px;
-	display: inline-block;
-}
 .navbar-logo {
 	width: 75px;
 }
