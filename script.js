@@ -46,6 +46,9 @@ app.config(function($routeProvider, $locationProvider) {
       		}
   		}	
 	});
+   $routeProvider.when("/carandtulips", {
+      templateUrl: "templates/carandtulips.html"
+   });
    $routeProvider.when("/gallery", {
       templateUrl: "templates/gallery.html"
    });

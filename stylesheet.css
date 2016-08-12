@@ -195,9 +195,24 @@
     color:#fff !important;
     z-index:2;
     transition: all 0.5s ease-in-out;
+    font-family: "Avenir Next"
+}
+.caption h4 {
+	text-decoration: none;
+	color: white;
+}
+.caption p {
+	font-size: 13px;
+}
+.caption a {
+	color: white;
 }
 .thumbnail:hover .caption {
     top: 0%;
+}
+.label-default {
+	font-family: "Avenir Next";
+	font-weight: 100;
 }
 .ourSpace button {
 	padding: 5px;
@@ -217,6 +232,15 @@
 }
 .spacing {
 	height: 40px;
+}
+/*-- Car & Tulips Page --*/
+.carandtulips {
+	font-family: "Avenir Next";
+}
+.carandtulips img {
+	width: 60%;
+	height: 60%;
+	margin: 0px auto;
 }
 /*-- Gallery --*/
 .gallery ul {
