@@ -6,48 +6,19 @@
 	<div class="books-background">
 		<div class="first-row">
 
-			<div id="SteveJobs" class="SteveJobs" onclick="location.href='https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537';" style="cursor: pointer;">
+			<div ng-repeat="b in books" ng-class="b.class" ng-mouseenter="bookHovered(b)" ng-mouseleave="bookNotHovered(b)">
 			</div>
 
-			<div id="ElonMusk" class="ElonMusk" onclick="location.href='https://www.amazon.com/Elon-Musk-SpaceX-Fantastic-Future/dp/0062301233';" style="cursor: pointer;">
-			</div>
-
-			<div id="DethroningTheKing" class="DethroningTheKing" onclick="location.href='https://www.amazon.com/Dethroning-King-Takeover-Anheuser-Busch-American/dp/1118157028';" style="cursor: pointer;">
-			</div>
-
-			<div class="TheOutsiders" onclick="location.href='https://www.amazon.com/Outsiders-Unconventional-Radically-Rational-Blueprint/dp/1422162672';" style="cursor: pointer;">
-			</div>
-
-			<div class="ColdSteel" onclick="location.href='https://www.amazon.com/Cold-Steel-Lakshmi-Multi-Billion-Dollar-Empire/dp/0349120978';" style="cursor: pointer;">
-			</div>
-
-			<div class="MrChina" onclick="location.href='https://www.amazon.com/Mr-China-Memoir-Tim-Clissold/dp/0060761407';" style="cursor: pointer">
-			</div>
-
-			<div class="TheBlackSwan" onclick="location.href='https://www.amazon.com/Black-Swan-Improbable-Robustness-Fragility/dp/081297381X';" style="cursor: pointer">
-			</div>
-
-			<div class="Innovators" onclick="location.href='https://www.amazon.com/Innovators-Hackers-Geniuses-Created-Revolution/dp/147670869X';" style="cursor: pointer">
-			</div>
-
-			<div class="Originals" onclick="location.href='https://www.amazon.com/Originals-How-Non-Conformists-Move-World/dp/0525429565';" style="cursor: pointer">
-			</div>
-
-			<div class="DeepValueInvesting" onclick="location.href='https://www.amazon.com/Deep-Value-Investing-Finding-potential/dp/085719299X';" style="cursor: pointer;">
-			</div>
+			<!-- <div id="SteveJobs" class="SteveJobs" onclick="location.href='https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537';" style="cursor: pointer;">
+			</div> -->
 
 		</div>
 	</div>
 
-	<div class="hovertest">
-		<p>Hover Over</p>
-	</div>
-
 	<div class="content">
-		<p>Book title</p>
-		<p>Summary goes here</p>
-		<p>Favorite quote:
-		<br> "quote quote quote"<p>
+		<p>Book title: {{ hoveredBook.title }}</p>
+		<p>Author: {{ hoveredBook.author }}</p>
+		<p>Summary: {{ hoveredBook.summary }}</p>
 	</div>
 
 	<div class="return">   

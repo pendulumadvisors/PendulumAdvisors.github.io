@@ -28,48 +28,48 @@ app.config(function($routeProvider, $locationProvider) {
 	   templateUrl: "templates/login.html",
 		controller: "LoginCtrl"
 	});
-   $routeProvider.when("/adminPage", {
+  $routeProvider.when("/adminPage", {
       templateUrl: "templates/adminPage.html",
       controller: "AdminCtrl",
       resolve: {
-         "currentAuth": function($firebaseAuth) {
-         return $firebaseAuth().$requireSignIn();
-         }
+          "currentAuth": function($firebaseAuth) {
+          return $firebaseAuth().$requireSignIn();
+          }
       }
-   });
+  });
 	$routeProvider.when('/main', {
-		templateUrl: 'templates/main.html',
-		controller: 'MainCtrl',
-		resolve: {
-      		"currentAuth": function($firebaseAuth) {
-	         return $firebaseAuth().$requireSignIn();
+		  templateUrl: 'templates/main.html',
+		  controller: 'MainCtrl',
+		  resolve: {
+      	  "currentAuth": function($firebaseAuth) {
+	        return $firebaseAuth().$requireSignIn();
       		}
   		}	
 	});
-   $routeProvider.when("/carandtulips", {
-      templateUrl: "templates/carandtulips.html"
-   });
-   $routeProvider.when("/gallery", {
-      templateUrl: "templates/gallery.html"
-   });
-   $routeProvider.when("/disclaimer", {
-      templateUrl: "templates/disclaimer.html"
-   });
-   $routeProvider.when("/research", {
-      templateUrl: "templates/research.html"
-   });
+  $routeProvider.when("/carandtulips", {
+    templateUrl: "templates/carandtulips.html"
+  });
+  $routeProvider.when("/gallery", {
+    templateUrl: "templates/gallery.html"
+  });
+  $routeProvider.when("/disclaimer", {
+    templateUrl: "templates/disclaimer.html"
+  });
+  $routeProvider.when("/research", {
+    templateUrl: "templates/research.html"
+  });
 	$routeProvider.when('/ExternalResearch', {
-      controller: 'ExternalResearchCtrl',
 		templateUrl: 'templates/ExternalResearch.html'
 	});
 	$routeProvider.when('/podcasts', {
 		templateUrl: 'templates/podcasts.html' 
 	});
 	$routeProvider.when('/favoriteBooks', {
+    controller: 'favoriteBooksCtrl',
 		templateUrl: 'templates/favoriteBooks.html'
 	});
 	$routeProvider.when('/favoriteArticles', {
-      controller: 'ArticlesCtrl',
+    controller: 'ArticlesCtrl',
 		templateUrl: 'templates/favoriteArticles.html'
 	});
 });
@@ -309,14 +309,47 @@ app.controller('MainCtrl', function($scope, $firebaseAuth, $firebaseObject, $fir
 });
 
 
-/* -- Controller for External Research page -- */
-app.controller('ExternalResearchCtrl', function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location) {
-   $scope.authObj = $firebaseAuth();
-   $scope.currentUser = $scope.authObj.$getAuth();
-   // var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
-   //    $scope.currentUserData = $firebaseObject(userRef);
-   var pdfsExternalResearchRef = firebase.database().ref().child("pdfsExternalResearch");
-      $scope.pdfsExternalResearch = $firebaseArray(pdfsExternalResearchRef);
+/* -- Controller for Favorite Books page -- */
+app.controller('favoriteBooksCtrl', function($scope, $location) {
+   $scope.books = [
+    {
+      class: 'SteveJobs',
+      title: 'Steve Jobs',
+      author: 'Walter Isaacson',
+      summary: 'Based on more than forty interviews with Steve Jobs conducted over two years—as well as interviews with more than 100 family members, friends, adversaries, competitors, and colleagues—Walter Isaacson has written a riveting story of the roller-coaster life and searingly intense personality of a creative entrepreneur whose passion for perfection and ferocious drive revolutionized six industries: personal computers, animated movies, music, phones, tablet computing, and digital publishing. Isaacson’s portrait touched millions of readers.'
+    },
+    {
+      class:'ElonMusk',
+      title: 'Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future',
+      author: 'Ashlee Vance',
+      summary: "In Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future, veteran technology journalist Ashlee Vance provides the first inside look into the extraordinary life and times of Silicon Valley's most audacious entrepreneur. Written with exclusive access to Musk, his family and friends, the book traces the entrepreneur's journey from a rough upbringing in South Africa to the pinnacle of the global business world. Vance spent more than 30 hours in conversation with Musk and interviewed close to 300 people to tell the tumultuous stories of Musk's world-changing companies: PayPal, Tesla Motors, SpaceX and SolarCity, and to characterize a man who has renewed American industry and sparked new levels of innovation while making plenty of enemies along the way."
+    },
+    {
+      class: 'DethroningTheKing',
+      title: 'Dethroning The King: The Hostile Takeover of Anheuser-Busch',
+      author: 'Julie MacIntosh',
+      summary: "In Dethroning the King, Julie MacIntosh, the award-winning financial journalist who led coverage of the takeover for the Financial Times, details how the drama that unfolded at Anheuser-Busch in 2008 went largely unreported as the world tumbled into a global economic crisis second only to the Great Depression. Today, as the dust settles, questions are being asked about how the 'King of Beers' was so easily captured by a foreign corporation, and whether the company's fall mirrors America's dwindling financial and political dominance as a nation."
+    },
+    {
+      class: 'TheOutsiders',
+      title: 'The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success',
+      author: 'William Thorndike',
+      summary: "What is the hallmark of exceptional CEO performance? In this refreshing, counterintuitive book, author Will Thorndike brings to bear the analytical wisdom of a successful career in investing, closely evaluating the performance of companies and their leaders. You will meet eight individualistic CEOs whose firms’ average returns outperformed the S&P 500 by a factor of twenty—in other words, an investment of $10,000 with each of these CEOs, on average, would have been worth over $1.5 million twenty-five years later. "
+    },
+    {
+      class: 'ColdSteel',
+      title: 'Cold Steel: Lakshmi Mittal and the Multi-Billion-Dollar Battle for a Global Empire',
+      author: 'Tim Bouquet',
+      summary: "When the world's two largest steel producers went head to head in a bitter struggle for market domination, an epic corporate battle ensued that sent shockwaves through the political corridors of Europe, overheated the world's financial markets and transformed the steel industry. Billions of dollars were at stake. At the heart of the battle were two men: Guy Dollé, Chairman and CEO of Luxembourg-based Arcelor, the world's largest steel producer by turnover and Lakshmi Mittal, a self-made Indian industrialist and the richest man in Great Britain. Only one could prevail… "
+    }
+  ]
+  $scope.bookHovered = function(book) {
+    $scope.hoveredBook = book;
+  }
+  $scope.bookNotHovered = function(book) {
+    $scope.hoveredBook = null;
+  }
+
 });
 
 
