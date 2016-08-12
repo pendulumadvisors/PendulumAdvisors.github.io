@@ -316,12 +316,13 @@ app.controller('ExternalResearchCtrl', function($scope, $firebaseAuth, $firebase
 
 /* -- Controller for Articles page -- */
 app.controller('ArticlesCtrl', function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location) {
-   // var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
-   //    $scope.currentUserData = $firebaseObject(userRef);
+
    var articlesRef = firebase.database().ref().child("favouriteArticles");
       $scope.articles = $firebaseArray(articlesRef);
+
 });
 
+/* -- -- */
 app.controller("SignupCtrl", function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $window) {
    $scope.authObj = $firebaseAuth();
 
