@@ -233,6 +233,38 @@
 .spacing {
 	height: 40px;
 }
+@media (max-width: 1207px) {
+	.caption h4 {
+	font-size: 12px;
+	}
+	.caption p {
+	font-size: 10px;
+	}
+}
+@media (max-width: 980px) {
+	.caption h4 {
+	font-size: 9px;
+	}
+	.caption p {
+	font-size: 8px;
+	}
+}
+@media (max-width: 800px) {
+	.caption h4 {
+	font-size: 8px;
+	}
+	.caption p {
+	font-size: 6px;
+	}
+}
+@media (max-width: 515px) {
+	.caption h4 {
+	font-size: 6px;
+	}
+	.caption p {
+	font-size: 5px;
+	}
+}
 /*-- Car & Tulips Page --*/
 .carandtulips {
 	font-family: "Avenir Next";
@@ -288,6 +320,9 @@
 }
 .copyright {
 	text-align: center;
+}
+.copyright a {
+	color: #d84727;
 }
 @media (max-width: 991px) {
 	.footer .col-md-12 {
