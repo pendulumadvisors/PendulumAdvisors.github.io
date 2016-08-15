@@ -138,12 +138,13 @@
 	font-family: "Avenir Next";
 	text-transform: uppercase;
 }
-.directors {
-	margin-top: 30px;
+.Gerard {
+	margin-top: 10px;
 }
-.directors img {
-	margin-bottom: 70px;
+.Gerard span p {
+	margin-bottom: 80px;
 }
+
 .internsImg {
 	max-width: 110px;
 	border-radius: 100%;
@@ -361,7 +362,7 @@
 }
 /*-- Login Page --*/
 .closedsafe {
-	background: url(/images/closedsafe1.jpg) no-repeat center center;
+	background: url(/images/newclosedsafe.jpg) no-repeat center center;
 	background-size: contain;
 	text-align: center;
 	margin: 0px auto;
@@ -373,7 +374,7 @@
 	font-family: "Avenir Next";
 	text-transform: uppercase;
 	/*margin-top: 20%;*/
-	margin-top: 250px;
+	margin-top: 260px;
 	margin-left:44%;
 	position: absolute;
 }
@@ -381,7 +382,7 @@
 	font-family: "Avenir Next";
 	text-transform: uppercase;
 	/*margin-top: 23%;*/
-	margin-top: 280px;
+	margin-top: 290px;
 	margin-left: 44%;
 	position: absolute;
 }
@@ -409,6 +410,24 @@
 	}
 	.psBlock {
 		margin-left:30%;
+	}
+}
+@media (max-width: 376px) {
+	.emailBlock {
+		margin-top: 250px;
+		margin-left: 30%;
+	}
+	.psBlock {
+		margin-top: 270px;
+		margin-left: 30%;
+	}
+}
+@media (max-width: 321px) {
+	.emailBlock {
+		margin-top: 210px;
+	}
+	.psBlock {
+		margin-top: 230px;
 	}
 }
 

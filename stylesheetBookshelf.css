@@ -119,11 +119,11 @@
 	opacity: 1;
 	background: rgba(0, 0, 0, 0.7);
 }
-.return img {
+.book-return img {
 	width: 5%;
 	height: auto;
 	float: left;
-	margin: -100px 0px 0px 50px;
+	margin: -700px 0px 0px 50px;
 	position: absolute;
 }
 @media (max-width: 725px) {
@@ -143,7 +143,6 @@
 	border-radius: 4px;
 }
 .opensafe {
-	padding-top: 30px;
 	display: block;
 	margin: 0 auto;
 	height: 100vh;
@@ -164,7 +163,6 @@
 .InternalResearchBackground {
 	background: url(/images/woodpanel.jpg);
 	background-size: cover;
-	margin-top: 100px;
 	width: 100%;
 	height: 100vh;
 }
@@ -182,15 +180,18 @@
 	padding-left: 60px;
 	padding-right: 20px;
 }
+.InternalResearchList {
+	padding-top: 110px;
+}
 .browse-list-right {
 	font-family: "Avenir Next";
-	font-size: 18px;
+	font-size: 19px;
 	font-weight: normal;
-	text-align: right;
-	padding-right: 100px;
-	margin-left: 40%;
+	text-align: center;
+	padding: 5px 0 5px 0;
+	margin: 0px auto;
 	background-color: white;
-	opacity: 0.9;
+	opacity: 0.8;
 }
 .browse-list button {
 	background-color: #d84727;
@@ -484,7 +485,39 @@
 	position: absolute;
 }
 .ValueInvestors {
-	
+	margin-top: 78%;
+	width: 4%;
+	height: 29%;
+	margin-left: 390px;
+	position: absolute;
+}
+.TheBigShort {
+	margin-top: 78%;
+	width: 4%;
+	height: 29%;
+	margin-left: 412px;
+	position: absolute;
+}
+.CompetitionDemystified {
+	margin-top: 83%;
+	width: 4%;
+	height: 26%;
+	margin-left: 439px;
+	position: absolute;
+}
+.CommonStocksAnd {
+	margin-top: 81%;
+	width: 4%;
+	height: 27%;
+	margin-left: 461px;
+	position: absolute;
+}
+.PoorCharliesAlmanack {
+	margin-top: 74%;
+	width: 8%;
+	height: 32%;
+	margin-left: 485px;
+	position: absolute;
 }
 
 .SteveJobs:hover, .ElonMusk:hover, .DethroningTheKing:hover, .TheOutsiders:hover , .ColdSteel:hover,
@@ -493,7 +526,8 @@
 .JohnNeffonInvesting:hover, .ContrarianInvestment:hover, .ZebrainLionCountry:hover, .FinancialFolly:hover,
 .ValueInvesting:hover, .ZerotoOne:hover, .GreatCrash1929:hover, .IntelligentInvestor:hover, .MostImportantThing:hover,
 .HardThingaboutHardThings:hover, .TomorrowsGold:hover, .FiveRules:hover, .YouCanBe:hover, .ValueInvesting:hover,
-.MoreThanYouKnow:hover, .PanicOnWallStreet:hover, .InvestingtheTempletonWay:hover
+.MoreThanYouKnow:hover, .PanicOnWallStreet:hover, .InvestingtheTempletonWay:hover, .ValueInvestors:hover, .TheBigShort:hover,
+.CompetitionDemystified:hover, .CommonStocksAnd:hover, .PoorCharliesAlmanack:hover
  {
 	background-color: orange;
 	opacity: 0.5;
@@ -507,6 +541,13 @@
 	margin-left: 60%;
 	color: white;
 	
+}
+.favouritebook-return img {
+	width: 5%;
+	height: auto;
+	float: left;
+	margin: -700px 0px 0px 50px;
+	position: absolute;
 }
 
 /*-- Favorite Articles --*/
