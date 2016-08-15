@@ -5,13 +5,13 @@
 	text-align: center;
 }
 .bookshelf {
-	background: url(/images/research.jpg) no-repeat center center;
+	background: url(/images/newresearch.jpg) no-repeat center center;
 	background-size: cover;
 	text-align: center;
 	margin: 0px auto;
 	display: block;
 	height: 800px;
-	width: 550px;
+	width: 560px;
 	position: relative;
 }
 .wall-background a {
@@ -26,9 +26,9 @@
 }
 .shelf1 {
 	padding: 10%;
-	height: 23%;
-	width: 40%;
-	margin-left: 20px;
+	height: 22%;
+	width: 44%;
+	margin-left: 14px;
 	position: absolute;
 	opacity: 0;
 	border: 1px solid white;
@@ -40,9 +40,9 @@
 }
 .shelf2 {
 	padding: 10%;
-	height: 23%;
-	width: 40%;
-	margin-left: 310px;
+	height: 22%;
+	width: 44%;
+	margin-left: 300px;
 	position: absolute;
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
@@ -53,13 +53,13 @@
 	background: rgba(0, 0, 0, 0.7);
 }
 .bookshelfRow2 {
-	margin-top: 38%;
+	margin-top: 36%;
 }
 .shelf3 {
 	padding: 12%;
-	height: 22%;
-	width: 42%;
-	margin-left: 20px;
+	height: 21%;
+	width: 44%;
+	margin-left: 13px;
 	position: absolute;
 	opacity: 0;
 	border: 1px solid white;
@@ -72,8 +72,8 @@
 .shelf4and5 {
 	padding: 20% 10px 0 10px;
 	height: 46%;
-	width: 40%;
-	margin-left: 310px;
+	width: 43%;
+	margin-left: 305px;
 	position: absolute;
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
@@ -84,13 +84,13 @@
 	background: rgba(0, 0, 0, 0.7);
 }
 .bookshelfRow3 {
-	margin-top: 74%;
+	margin-top: 70%;
 }
 .shelf6 {
-	padding: 5%;
-	height: 20%;
-	width: 40%;
-	margin-left: 20px;
+	padding: 8%;
+	height: 22%;
+	width: 44%;
+	margin-left: 13px;
 	position: absolute;
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
@@ -102,14 +102,14 @@
 }
 .lastshelf {
 	margin-top: 35%;
-	height: 20%;
-	width: 90%;
-	margin-left: 20px;
+	height: 22%;
+	width: 95%;
+	margin-left: 13px;
 	position: absolute;
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
 	border: 1px solid white;
-	padding-top: 8%;
+	padding-top: 10%;
 	color: white;
 	font-size: 30px;
 	font-family: "Avenir Next";
@@ -205,8 +205,6 @@
 
 /*-- External Research --*/
 .ExternalResearchBackground {	
-	/*background: url(/images/money.jpg) no-repeat center center;
-	background-size: cover;*/
 	width: 100vw;
 	height: 100vh;
 	font-family: "Avenir Next";
@@ -255,167 +253,249 @@
 	text-align: center;
 }
 .books-background {	
-	background: url(/images/favoritebooks.jpg) no-repeat center center;
+	background: url(/images/newfavoritebooks.jpg) no-repeat center center;
 	background-size: cover;
-	margin-left: 13%;
-	height: 780px;
+	margin-left: 12%;
+	height: 850px;
 	width: 550px;
 	position: relative;
 }
 .first-row {
-	padding-top: 18%;
+	padding-top: 27%;
 }
 .SteveJobs {
-	width: 10%;
+	width: 11%;
 	height: 30%;
-	margin-left: 50px;
+	margin-left: 22px;
 	position: absolute;
 }
 .ElonMusk {
-	width: 5%;
+	width: 6%;
 	height: 30%;
-	margin-left: 108px;
+	margin-left: 83px;
 	position: absolute;
 }
 .DethroningTheKing {
-	width: 5%;
-	height: 30%;
-	margin-left: 136px;
+	margin-top: 14px;
+	width: 6%;
+	height: 28%;
+	margin-left: 115px;
 	position: absolute;
 }
 .TheOutsiders {
-	width: 4%;
-	height: 30%;
-	margin-left: 165px;
+	margin-top: 30px;
+	width: 5%;
+	height: 26%;
+	margin-left: 145px;
 	position: absolute;
 }
 .ColdSteel {
+	margin-top: 48px;
 	width: 4%;
-	height: 30%;
-	margin-left: 186px;
+	height: 24%;
+	margin-left: 170px;
 	position: absolute;
 }
 .MrChina {
+	margin-top: 48px;
 	width: 4%;
-	height: 30%;
-	margin-left: 210px;
+	height: 24%;
+	margin-left: 195px;
 	position: absolute;
 }
 .TheBlackSwan {
-	width: 4%;
-	height: 30%;
-	margin-left: 233px;
+	margin-top: 48px;
+	width: 5%;
+	height: 24%;
+	margin-left: 219px;
 	position: absolute;
 }
 .Innovators {
-	width: 6%;
-	height: 30%;
-	margin-left: 255px;
+	margin-top: 48px;
+	width: 7%;
+	height: 24%;
+	margin-left: 245px;
 	position: absolute;
 }
 .Originals {
-	width: 4%;
-	height: 30%;
-	margin-left: 289px;
+	margin-top: 13px;
+	width: 6%;
+	height: 28%;
+	margin-left: 278px;
 	position: absolute;
 }
 .DeepValueInvesting {
+	margin-top: 12px;
 	width: 3%;
-	height: 30%;
-	margin-left: 311px;
+	height: 28%;
+	margin-left: 307px;
 	position: absolute;
 }
 .YourMoneyandYourBrain {
+	margin-top: 12px;
 	width: 4%;
-	height: 30%;
-	margin-left: 325px;
+	height: 28%;
+	margin-left: 322px;
 	position: absolute;
 }
 .WealthWarWisdom {
-	width: 4%;
-	height: 30%;
-	margin-left: 350px;
+	margin-top: 7px;
+	width: 5%;
+	height: 29%;
+	margin-left: 347px;
 	position: absolute;
 }
 .EverythingIsObvious {
-	width: 5%;
-	height: 30%;
+	margin-top: 28px;
+	width: 6%;
+	height: 26%;
 	margin-left: 375px;
 	position: absolute;
 }
 .OneUpOnWallStreet {
-	width: 3%;
-	height: 30%;
-	margin-left: 405px;
+	margin-top: 30px;
+	width: 4%;
+	height: 26%;
+	margin-left: 408px;
 	position: absolute;
 }
 .SimpleButNotEasy {
-	width: 3%;
-	height: 30%;
-	margin-left: 420px;
+	width: 4%;
+	height: 29%;
+	margin-left: 430px;
 	position: absolute;
 }
 .JohnNeffonInvesting {
-	width: 3%;
-	height: 30%;
-	margin-left: 443px;
+	margin-top: 12px;
+	width: 4%;
+	height: 28%;
+	margin-left: 453px;
 	position: absolute;
 }
 .ContrarianInvestment {
-	width: 5%;
+	width: 6%;
 	height: 30%;
-	margin-left: 464px;
+	margin-left: 473px;
 	position: absolute;
 }
 .ZebrainLionCountry {
-	width: 3%;
-	height: 30%;
-	margin-left: 494px;
+	margin-top: 20px;
+	width: 4%;
+	height: 27%;
+	margin-left: 505px;
 	position: absolute;
 }
 .FinancialFolly {
-	margin-top: 68%;
-	width: 6%;
-	height: 31%;
-	margin-left: 52px;
+	margin-top: 78%;
+	width: 7%;
+	height: 30%;
+	margin-left: 24px;
 	position: absolute;
 }
 .ValueInvesting {
-	margin-top: 68%;
+	margin-top: 79%;
 	width: 4%;
-	height: 31%;
-	margin-left: 90px;
+	height: 29%;
+	margin-left: 65px;
 	position: absolute;
 }
 .ZerotoOne {
-	margin-top: 68%;
+	margin-top: 83%;
 	width: 3%;
-	height: 31%;
-	margin-left: 110px;
+	height: 26%;
+	margin-left: 87px;
 	position: absolute;
 }
 .GreatCrash1929 {
-	margin-top: 68%;
+	margin-top: 85%;
 	width: 3%;
-	height: 31%;
-	margin-left: 125px;
+	height: 25%;
+	margin-left: 105px;
 	position: absolute;
 }
 .IntelligentInvestor {
-	margin-top: 68%;
+	margin-top: 85%;
 	width: 7%;
-	height: 31%;
-	margin-left: 140px;
+	height: 25%;
+	margin-left: 121px;
 	position: absolute;
+}
+.MostImportantThing {
+	margin-top: 80%;
+	width: 4%;
+	height: 28%;
+	margin-left: 161px;
+	position: absolute;
+}
+.HardThingaboutHardThings {
+	margin-top: 80%;
+	width: 4%;
+	height: 28%;
+	margin-left: 181px;
+	position: absolute;
+}
+.TomorrowsGold {
+	margin-top: 80%;
+	width: 5%;
+	height: 28%;
+	margin-left: 206px;
+	position: absolute;
+}
+.FiveRules {
+	margin-top: 81%;
+	width: 5%;
+	height: 27%;
+	margin-left: 232px;
+	position: absolute;
+}
+.YouCanBe {
+	margin-top: 83%;
+	width: 4%;
+	height: 26%;
+	margin-left: 258px;
+	position: absolute;
+}
+.ValueInvesting {
+	margin-top: 77%;
+	width: 5%;
+	height: 30%;
+	margin-left: 278px;
+	position: absolute;
+}
+.MoreThanYouKnow {
+	margin-top: 80%;
+	width: 4%;
+	height: 28%;
+	margin-left: 310px;
+	position: absolute;
+}
+.PanicOnWallStreet {
+	margin-top: 83%;
+	width: 5%;
+	height: 26%;
+	margin-left: 335px;
+	position: absolute;
+}
+.InvestingtheTempletonWay {
+	margin-top: 78%;
+	width: 5%;
+	height: 29%;
+	margin-left: 362px;
+	position: absolute;
+}
+.ValueInvestors {
+	
 }
 
 .SteveJobs:hover, .ElonMusk:hover, .DethroningTheKing:hover, .TheOutsiders:hover , .ColdSteel:hover,
 .MrChina:hover, .TheBlackSwan:hover, .Innovators:hover, .Originals:hover, .DeepValueInvesting:hover, .YourMoneyandYourBrain:hover,
 .WealthWarWisdom:hover, .EverythingIsObvious:hover, .OneUpOnWallStreet:hover, .SimpleButNotEasy:hover,
 .JohnNeffonInvesting:hover, .ContrarianInvestment:hover, .ZebrainLionCountry:hover, .FinancialFolly:hover,
-.ValueInvesting:hover, .ZerotoOne:hover, .GreatCrash1929:hover, .IntelligentInvestor:hover
+.ValueInvesting:hover, .ZerotoOne:hover, .GreatCrash1929:hover, .IntelligentInvestor:hover, .MostImportantThing:hover,
+.HardThingaboutHardThings:hover, .TomorrowsGold:hover, .FiveRules:hover, .YouCanBe:hover, .ValueInvesting:hover,
+.MoreThanYouKnow:hover, .PanicOnWallStreet:hover, .InvestingtheTempletonWay:hover
  {
-	background-color: black;
+	background-color: orange;
 	opacity: 0.5;
 }
 

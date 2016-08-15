@@ -449,6 +449,90 @@ app.controller('favoriteBooksCtrl', function($scope, $location) {
       title: 'The Intelligent Investor',
       author: 'Benjamin Graham',
       summary: "The greatest investment advisor of the twentieth century, Benjamin Graham, taught and inspired people worldwide. Graham's philosophy of 'value investing' -- which shields investors from substantial error and teaches them to develop long-term strategies -- has made The Intelligent Investor the stock market bible ever since its original publication in 1949. Over the years, market developments have proven the wisdom of Graham's strategies. Vital and indispensable, this HarperBusiness Essentials edition of The Intelligent Investor is the most important book you will ever read on how to reach your financial goals."
+    }, 
+    {
+      class: 'MostImportantThing',
+      title: 'The Most Important Thing Illuminated: Uncommon Sense for the Thoughtful Investor',
+      author: 'Howard Marks',
+      summary: ""
+    }, 
+    {
+      class: 'HardThingaboutHardThings',
+      title: 'The Hard Thing about Hard Things',
+      author: 'Ben Horowitz',
+      summary: ""
+    }, 
+    {
+      class: 'TomorrowsGold',
+      title: 'Tomorrow’s Gold: Asia’s Age of Discovery',
+      author: 'Marc Faber',
+      summary: ""
+    }, 
+    {
+      class: 'FiveRules',
+      title: 'The Five Rules for Successful Stock Investing',
+      author: 'Pat Dorsey',
+      summary: ""
+    }, 
+    {
+      class: 'YouCanBe',
+      title: 'You Can Be A Stock Market Genius',
+      author: 'Joel Greenblatt',
+      summary: ""
+    }, 
+    {
+      class: 'ValueInvesting',
+      title: 'Value Investing: Tools and Techniques for Intelligent Investment',
+      author: 'James Montier',
+      summary: ""
+    }, 
+    {
+      class: 'MoreThanYouKnow',
+      title: 'More Than You Know',
+      author: 'Michael Mauboussin',
+      summary: ""
+    }, 
+    {
+      class: 'PanicOnWallStreet',
+      title: 'Panic on Wall Street: A History of America’s Financial Disasters',
+      author: 'Robert Sobel',
+      summary: "The financial panics analyzed in this book illustrate the complexity of such events and that the causes are varied: political, military, economic, and even psychological."
+    }, 
+    {
+      class: 'InvestingtheTempletonWay',
+      title: 'Investing the Templeton Way',
+      author: 'Lauren Templeton',
+      summary: ""
+    }, 
+    {
+      class: 'ValueInvestors',
+      title: 'The Value Investors',
+      author: 'Ronald Chan',
+      summary: "In an attempt to understand exactly what kind of temperament, Ronald W. Chan interviewed 12 value-investing legends from around the world, learning how their personal background, culture, and life experiences have shaped their investment mindset and strategy. The Value Investors: Lessons from the World’s Top Fund Managers is the result."
+    },
+    {
+      class: 'TheBigShort',
+      title: 'The Big Short: Inside the Doomsday Machine',
+      author: 'Michael Lewis',
+      summary: ""
+    }, 
+    {
+      class: 'CompetitionDemystified',
+      title: 'Competition Demystified',
+      author: 'Bruce Greenwald',
+      summary: "Greenwald and his coauthor, Judd Kahn, offer an easy-to-follow method for understanding the competitive structure of your industry and developing an appropriate strategy for your specific position. Over the last two decades, the conventional approach to strategy has become frustratingly complex. It’s easy to get lost in a sophisticated model of your competitors, suppliers, buyers, substitutes, and other players, while losing sight of the big question: Are there barriers to entry that allow you to do things that other firms cannot?"
+    }, 
+    {
+      class: 'CommonStocksAnd',
+      title: 'Common Stocks and Uncommon Profits and Other Writings',
+      author: 'Philip Fisher',
+      summary: "This book is invaluable reading and has been since it was first published in 1958. The updated paperback retains the investment wisdom of the original edition and includes the perspectives of the author's son Ken Fisher, an investment guru in his own right in an expanded preface and introduction. 'I sought out Phil Fisher after reading his Common Stocks and Uncommon Profits...A thorough understanding of the business, obtained by using Phil's techniques...enables one to make intelligent investment commitments.' - Warren Buffet"
+    }, 
+    {
+      class: 'PoorCharliesAlmanack',
+      title: 'Poor Charlie’s Almanack: The Wit and Wisdom of Charles T. Munger',
+      author: 'Charles T. Munger and Peter Kaufman',
+      summary: "Poor Charlie's Almanack contains the wit and wisdom of Charlie Munger: his talks, lectures and public commentary. And, it has been written and compiled with both Charlie Munger and Warren Buffett's encouragement and cooperation. Charlie's unique worldview, what he calls a 'multidisciplinary' approach, is a self-developed model for clear and simple thinking while being far from simplistic itself. Throughout the book, Charlie displays his intellect, wit, integrity, and rhetorical flair. Using his encyclopedic knowledge, he cites references from classical orators to eighteenth- and nineteenth-century European literati to pop culture icons of the moment while simultaneously reinforcing the virtues of lifelong learning and intellectual curiosity."
     }
   ]
   $scope.bookHovered = function(book) {
