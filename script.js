@@ -464,7 +464,7 @@ app.controller('favoriteBooksCtrl', function($scope, $location) {
     }, 
     {
       class: 'TomorrowsGold',
-      title: 'Tomorrow’s Gold: Asia’s Age of Discovery',
+      title: "Tomorrow's Gold: Asia's Age of Discovery",
       author: 'Marc Faber',
       summary: ""
     }, 
@@ -494,7 +494,7 @@ app.controller('favoriteBooksCtrl', function($scope, $location) {
     }, 
     {
       class: 'PanicOnWallStreet',
-      title: 'Panic on Wall Street: A History of America’s Financial Disasters',
+      title: "Panic on Wall Street: A History of America's Financial Disasters",
       author: 'Robert Sobel',
       summary: "The financial panics analyzed in this book illustrate the complexity of such events and that the causes are varied: political, military, economic, and even psychological."
     }, 
@@ -530,7 +530,7 @@ app.controller('favoriteBooksCtrl', function($scope, $location) {
     }, 
     {
       class: 'PoorCharliesAlmanack',
-      title: 'Poor Charlie’s Almanack: The Wit and Wisdom of Charles T. Munger',
+      title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger",
       author: 'Charles T. Munger and Peter Kaufman',
       summary: "Poor Charlie's Almanack contains the wit and wisdom of Charlie Munger: his talks, lectures and public commentary. And, it has been written and compiled with both Charlie Munger and Warren Buffett's encouragement and cooperation. Charlie's unique worldview, what he calls a 'multidisciplinary' approach, is a self-developed model for clear and simple thinking while being far from simplistic itself. Throughout the book, Charlie displays his intellect, wit, integrity, and rhetorical flair. Using his encyclopedic knowledge, he cites references from classical orators to eighteenth- and nineteenth-century European literati to pop culture icons of the moment while simultaneously reinforcing the virtues of lifelong learning and intellectual curiosity."
     }

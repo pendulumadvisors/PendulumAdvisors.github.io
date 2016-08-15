@@ -375,7 +375,7 @@
 	text-transform: uppercase;
 	/*margin-top: 20%;*/
 	margin-top: 260px;
-	margin-left:44%;
+	margin-left:43%;
 	position: absolute;
 }
 .psBlock {
@@ -383,7 +383,7 @@
 	text-transform: uppercase;
 	/*margin-top: 23%;*/
 	margin-top: 290px;
-	margin-left: 44%;
+	margin-left: 43%;
 	position: absolute;
 }
 .loginpage a {
@@ -412,22 +412,12 @@
 		margin-left:30%;
 	}
 }
-@media (max-width: 376px) {
+@media (max-width: 330px) {
 	.emailBlock {
+		margin-top: 220px;
+	}
+	.psBlock {
 		margin-top: 250px;
-		margin-left: 30%;
-	}
-	.psBlock {
-		margin-top: 270px;
-		margin-left: 30%;
-	}
-}
-@media (max-width: 321px) {
-	.emailBlock {
-		margin-top: 210px;
-	}
-	.psBlock {
-		margin-top: 230px;
 	}
 }
 
