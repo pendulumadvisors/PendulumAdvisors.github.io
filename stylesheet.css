@@ -86,10 +86,10 @@
 	padding-right: 10%;
 }
 .logo {
-	padding-top: 70px;
+	padding: 70px 0 60px 0;
 	text-align: center;
-	width: 20%;
-	height: 30%;
+	width: 30%;
+	height: 40%;
 	display: block;
 	margin: 0 auto;
 }
@@ -164,6 +164,9 @@
 }
 .col-md-9 p {
 	font-family: "Avenir Next";
+}
+.hiringImg img {
+	padding-bottom: 14px;
 }
 
 /*-- Our Space --*/
