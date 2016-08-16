@@ -445,115 +445,146 @@ app.controller('favoriteBooksCtrl', function($scope, $location) {
       class: 'FinancialFolly',
       title: 'This Time is Different: Eight Centuries of Financial Folly',
       author: 'Carmen Reinhart',
-      summary: "Throughout history, rich and poor countries alike have been lending, borrowing, crashing--and recovering--their way through an extraordinary range of financial crises. Each time, the experts have chimed, 'this time is different'--claiming that the old rules of valuation no longer apply and that the new situation bears little similarity to past disasters. With this breakthrough study, leading economists Carmen Reinhart and Kenneth Rogoff definitively prove them wrong. Covering sixty-six countries across five continents, This Time Is Different presents a comprehensive look at the varieties of financial crises, and guides us through eight astonishing centuries of government defaults, banking panics, and inflationary spikes--from medieval currency debasements to today's subprime catastrophe."
+      summary: 'In his book "The Black Swan", Nassim Nicholas Taleb gives a description of the library that Umberto Eco has at home. This library is sure to make an impact on visitors. Eco sorts his visitors in 2 camps - those who ask him if he has read all the books, and those who understand the value of books that have not been read yet but are used for research purposes. This is a book whose value lies in its comprehensive research of the financial history and there is no need to read this book as quickly as possible - it serves as a back up at times when we want to read about global financial crises.',
+      quote: 'Memorable quote: "Today\'s emerging markets can hardly claim credit for inventing serial default. Spain\'s defaults established a record that as yet remains unbroken. Indeed, Spain managed to default seven times in the 19th century alone after having defaulted six times in the preceding three centuries. With its string of 19th century defaults, Spain took the mantle for most defaults from France, which had abrogated its debt obligations on eight occasions between 1500 and 1800. Because during episodes of external debt default the French monarchs had a habit of executing major domestic creditors, the population came to refer to these episodes as \"bloodletting\". The French finance minister Terray, who served from 1768 to 1774, even opined that governments should default at least once every hundred years in order to restore equilibrium."'
     }, 
     {
       class: 'ValueInvesting1',
       title: 'Value Investing: From Graham to Buffett and Beyond',
       author: 'Bruce Greenwald',
-      summary: "From the 'guru to Wall Street's gurus' comes the fundamental techniques of value investing and their applications. Bruce Greenwald is one of the leading authorities on value investing. Some of the savviest people on Wall Street have taken his Columbia Business School executive education course on the subject. Now this dynamic and popular teacher, with some colleagues, reveals the fundamental principles of value investing, the one investment technique that has proven itself consistently over time. After covering general techniques of value investing, the book proceeds to illustrate their applications through profiles of Warren Buffett, Michael Price, Mario Gabellio, and other successful value investors. A number of case studies highlight the techniques in practice."
+      summary: 'We love this book and use it consistently as a reference on how to use Earnings Power Value, private market value, the strength of the franchise and how to apply an appropriate growth rate and cost of capital rate for these earnings. The book was written by Bruce Greenwald, professor at Columbia University and deals with many examples of how value investing is perhaps more an art than a science, based on the different ways in which different investors apply similar methodologies.',
+      quote: 'Memorable quote: "Still, when asked to name the mistake he makes most frequently, Edwin Schloss confesses to buying too much of the stock on the initial purchase and not leaving enough room to buy more when the price goes down."'
     },
     {
       class: 'ZerotoOne',
       title: 'Zero to One',
       author: 'Peter Thiel ',
-      summary: "The great secret of our time is that there are still uncharted frontiers to explore and new inventions to create. In Zero to One, legendary entrepreneur and investor Peter Thiel shows how we can find singular ways to create those new things. Thiel begins with the contrarian premise that we live in an age of technological stagnation, even if we’re too distracted by shiny mobile devices to notice. Progress can be achieved in any industry or area of business. It comes from the most important skill that every leader must master: learning to think for yourself. Doing what someone else already knows how to do takes the world from 1 to n, adding more of something familiar. But when you do something new, you go from 0 to 1. Zero to One presents at once an optimistic view of the future of progress in America and a new way of thinking about innovation: it starts by learning to ask the questions that lead you to find value in unexpected places."
+      summary: 'What started as a course by Peter Thiel on start-ups and entrepreneurship at Stanford University in 2012, the detailed notes by one student resulted in this book. Peter Thiel\'s venture capital track record is one of the best, having made early investments (bets?) on Facebook and SpaceX, following on from a successful exit of PayPal. The great secret of our time is that there are still unchartered frontiers to explore and new inventions to create. Thiel begins with the contrarian promise that we live in an age of technological stagnation. Information technology has improved rapidly, but there is no reason why progress should be limited to computers or Silicon Valley. The book presents an optimistic view of the future of progress in America and a new way of thinking about innovation.',
+      quote: 'Memorable quote: "At Founders Fund we saw (the clean-tech bubble) coming. The most obvious clue was sartorial: clean-tech executives were running around wearing suits and ties. This was a huge red flag, because real technologists wear T-shirts and jeans. So we instituted a blanket rule: pass on any company whose founders dressed up for pitch meetings."'
     }, 
     {
       class: 'GreatCrash1929',
       title: 'The Great Crash 1929',
       author: 'John Galbraith',
-      summary: "Of John Kenneth Galbraith's The Great Crash 1929, the Atlantic Monthly said: 'Economic writings are seldom notable for their entertainment value, but this book is. Galbraith's prose has grace and wit, and he distills a good deal of sardonic fun from the whopping errors of the nation's oracles and the wondrous antics of the financial community.' Originally published in 1955, Galbraith's book became an instant bestseller, and in the years since its release it has become the unparalleled point of reference for readers looking to understand American financial history."
+      summary: 'This is one of the most entertaining books on the crash of 1929, the lead up and the aftermath. It certainly is Galbraith\'s most accessible book. The book is almost sarcastic in the way in which is describes the lack of wisdom in crowds and the foolishness that prevented rational thinking during the late 1920\'s in the lead up to that famous October day.',
+      quote: 'Memorable quote: "In good times people are relaxed, trusting, and money is always plentiful. But even though money is plentiful, there are always many people who need more. Under these circumstances the rate of fraud grows, and the rate of discovery falls off, and the fraud increases rapidly. In depression all this is reversed. Money is watched with a narrow, suspicious eye. Audits are penetrating and meticulous. Commercial morality is enormously improved. Fraud shrinks".'
     }, 
     {
       class: 'IntelligentInvestor',
       title: 'The Intelligent Investor',
       author: 'Benjamin Graham',
-      summary: "The greatest investment advisor of the twentieth century, Benjamin Graham, taught and inspired people worldwide. Graham's philosophy of 'value investing' -- which shields investors from substantial error and teaches them to develop long-term strategies -- has made The Intelligent Investor the stock market bible ever since its original publication in 1949. Over the years, market developments have proven the wisdom of Graham's strategies. Vital and indispensable, this HarperBusiness Essentials edition of The Intelligent Investor is the most important book you will ever read on how to reach your financial goals."
+      summary: 'All-time classic on the merits and rationality on Graham\'s philosophy of "value investing", which ultimately inspired today\'s great investors including Warren Buffett, Charlie Munger, and Seth Klarman, to name but a few.',
+      quote: 'Memorable quote: "No one really knows anything about what will happen in the distant future, but analysts and investors have strong views on the subject just the same".'
     }, 
     {
       class: 'MostImportantThing',
       title: 'The Most Important Thing Illuminated: Uncommon Sense for the Thoughtful Investor',
       author: 'Howard Marks',
-      summary: ""
+      summary: 'Howard Marks is chairman of Oaktree Capital, a US-based alternative asset management company with close to U$100b under management. This book is a summary of thoughts he has shared with clients for over 20 years. It is extremely insightful as all his wisdom is concentrated and categorised. The Most important thing explains the keys to successful investment and the pitfalls that can destroy capital. He explains in great detail the relationship between value and price, dedicates three chapters to risk and also explains the role of luck.',
+      quote: 'Memorable quote: "Investment success doesn\'t come from \'buying good things\', but rather from \'buying things well.\'"'
     }, 
     {
       class: 'HardThingaboutHardThings',
       title: 'The Hard Thing about Hard Things',
       author: 'Ben Horowitz',
-      summary: ""
+      summary: 'While everybody seems to think that starting a company is fun, Ben Horowitz explains in a very candid way that, perhaps, it is not. The book uses Horowitz\'s own experience of founding, running, selling, buying, and investing in technology companies with plenty of quotes from hip hop and rap artists; there are not many books that use lyrics from the likes of Nas, Al Davis, and Jay Z. The book explains how to hire, fire and demote, how to deal with internal politics and many other issues that are mostly ignored in the mainstream management books, that tend to only focus on successes of companies rather than pitfalls.\n\
+      Horowitz helps would-be or current entrepreneurs to understand what it is like to make difficult decisions. In the process, Horowitz is extremely funny and does not take himself too seriously.',
+      quote: 'Memorable quote: "If you are going to eat shit, don\'t nibble".'
     }, 
     {
       class: 'TomorrowsGold',
       title: "Tomorrow's Gold: Asia's Age of Discovery",
       author: 'Marc Faber',
-      summary: ""
+      summary: 'Faber\'s book is extremely insightful in terms of explaining financial history, how developed markets became developed and what to expect from the rise of Asia (the book was published in 2002). I loved the historic examples of new industries whereby investor sentiment took leave from reality, yet the underlying trend went in the predicted direction and over time, followed the expected market follies. Faber is extremely entertaining in describing market bubbles and sometimes gets carried away with new bubbles that are not there (yet?).\n\
+      The book also deals with the issues of supply-side capital allocation in the wrong way; this is something that often is ignored as investors focus on demand-side predictions.\n\
+      Comparing today\'s CNBC with the propaganda machines of Mussolini, Stalin, Mao and Hitler is certainly entertaining reading and makes us question the "small lies, big lies" crowd indoctrination.',
+      quote: 'Memorable quote: "The degree of one\'s emotion varies inversely with one\'s knowledge of the facts - the less you know, the hotter you get" - Bertrand Russell'
     }, 
     {
       class: 'FiveRules',
-      title: 'The Five Rules for Successful Stock Investing',
+      title: 'The Five Rules for Successful Stock Investing - Morningstar\'s guide to building wealth and winning in the market',
       author: 'Pat Dorsey',
-      summary: ""
+      summary: 'This book is extremely useful in the way it explains economic moats, or competitive advantages for businesses in different industries. Essentially, the book describes in great detail how companies can build and sustain competitive advantages like product differentiation through technology or features, or trusted brands or reputation, lowest cost producer, switching costs and high barriers to entry, and the most desired of them all - network effects.',
+      quote: 'Memorable quote: "High returns on capital will always be competed away eventually, and for most companies - and their investors - the regression is fast and painful."'
     }, 
     {
       class: 'YouCanBe',
       title: 'You Can Be A Stock Market Genius',
       author: 'Joel Greenblatt',
-      summary: ""
+      summary: 'Most certainly the worst title of all investment books, it is also one of the most insightful books that explains what to look for when special situations like spin-offs, restructurings and mergers happen. Greenblatt uses a lot of humour with historical examples to explain why his \'theories\' have worked and will continue to work.',
+      quote: 'Memorable quote: "But selling - that\'s a tough one. When do you sell? The short answer is - I don\'t know. I do, however, have a few tips."'
     }, 
     {
       class: 'ValueInvesting2',
       title: 'Value Investing: Tools and Techniques for Intelligent Investment',
       author: 'James Montier',
-      summary: ""
+      summary: 'James Montier has been described as a maverick, iconoclast and enfant terrible by the press. That more or less sums up why this book is interesting as James shows why everything you ever learnt at business school is wrong, including Efficient Market Theory. He further explains how to think about valuation and risk, why investment process and investment outcome are different, and why patience and value investing will beat growth investing any day. The book is written in a very funny way to describe material that can sometimes be dry.',
+      quote: 'Memorable quote: "What do goalkeepers facing a penalty and investors have in common? The answer is that both are prone to action. They feel they need to do something. However, inaction is also a decision."'
     }, 
     {
       class: 'MoreThanYouKnow',
       title: 'More Than You Know',
       author: 'Michael Mauboussin',
-      summary: ""
+      summary: 'Mauboussin\'s first book has become a popular guide to wise investing. The book deals with investment philosophy, psychology and strategy and science as they pertain to money management.\n\
+      The book offers tools to better understand the concepts of choice and risk, through practical advice and sound theory but also finds wisdom in a broad and deep range of fields, such as casino gambling, horse racing, psychology, and evolutionary biology. He analyzes the strategies of poker experts David Sklansky and Puggy Pearson and pinpoints parallels between mate selection in guppies and stock market booms.',
+      quote: 'Memorable quote: "The plural of anecdote is not evidence."'
     }, 
     {
       class: 'PanicOnWallStreet',
       title: "Panic on Wall Street: A History of America's Financial Disasters",
       author: 'Robert Sobel',
-      summary: "The financial panics analyzed in this book illustrate the complexity of such events and that the causes are varied: political, military, economic, and even psychological."
+      summary: 'While this book was released in 1968, it still offers some great insights into the story of Wall Street - essentially there is little new under the sun since the stock exchange was set up around 1790. There have been lots of people who lost their wealth through losing their rationality as they were blinded by the idea of striking it rick (quickly).\n\
+      The book deals with many different bubbles - not just equities but also land, commerce and joint stock companies. Of the 12 panics described in this book, almost all of them had wealthy and supposedly intelligent men who were obliterated by the panics.',
+      quote: 'Memorable quote: "It was conceivable that a buyer would put down $10 for $100 worth of stock, which itself represented $10 in equity and $90 in debt!" That was 1929.'
     }, 
     {
       class: 'InvestingtheTempletonWay',
-      title: 'Investing the Templeton Way',
-      author: 'Lauren Templeton',
-      summary: ""
+      title: 'Investing the Templeton Way - the market beating strategies of value investing\'s legendary bargain hunter',
+      author: 'Lauren Templeton and Scott Philips',
+      summary: 'Yet another biography on a great investor, Sir John was different as he ventured over the US borders early in his investing career, was happy to short and go long and looked at different asset classes. \n\
+      The book gives some insight into the background of Sir John and the way he became a better investor over time by not being able to control his emotions during times when others would lose theirs.',
+      quote: 'Memorable quote: "Bull markets are born on pessimism, grow on scepticism, mature on optimism, and die on euphoria. The time of maximum pessimism is the best time to buy, and the time of maximum optimism is the best time to sell."'
     }, 
     {
       class: 'ValueInvestors',
-      title: 'The Value Investors',
+      title: 'The Value Investors - lessons from the world\'s top fund managers',
       author: 'Ronald Chan',
-      summary: "In an attempt to understand exactly what kind of temperament, Ronald W. Chan interviewed 12 value-investing legends from around the world, learning how their personal background, culture, and life experiences have shaped their investment mindset and strategy. The Value Investors: Lessons from the World’s Top Fund Managers is the result."
+      summary: 'Warren Buffett once said that "success in investing doesn’t correlate with I.Q. once you\'re above the level of 125. Once you have ordinary intelligence, what you need is the temperament to control the urges that get other people into trouble in investing."\n\
+      In an attempt to understand exactly what kind of temperament Buffett was talking about, the author interviewed 12 value-investing professionals based in different territories, learning how their personal background, culture, and life experiences have shaped their investment mindset and strategy.\n\
+      From 106-year-old Irving Kahn, who worked closely with \"father of value investing\" Benjamin Graham and remains active today, and 95-year-old Walter Schloss, to the co-founders of Hong Kong-based Value Partners, Cheah Cheng Hye and V-Nee Yeh, and Francisco García Paramés of Spain\'s Bestinver Asset Management, Chan chose investment luminaries to help him understand the international appeal - and success - of value investing.',
+      quote: 'Memorable quote: "Bestinver\'s competitive advantage is that it has a very long-term investment approach. By that, I don\'t mean four to five years but the next twenty to thirty years."'
     },
     {
       class: 'TheBigShort',
       title: 'The Big Short: Inside the Doomsday Machine',
       author: 'Michael Lewis',
-      summary: ""
+      summary: 'I really enjoyed Liar\'s poker and some of Lewis\' other books, like the New New thing. This one, however, I think excels in describing the madness of crowds and the pain and suffering those few rational investors have to go through when they bet against the crowd. This book is  extremely insightful in the way in which it describes the \'new normal\' of the US housing market, how almost everybody was involved and how some rational thinking created excellent payoffs, although this took patience, time and pain.',
+      quote: 'Memorable quote: "In Bakersfield, California, a Mexican strawberry picker with an income of U$14,000 and no English was lent every penny he needed to buy a house for U$724,000."'
     }, 
     {
       class: 'CompetitionDemystified',
       title: 'Competition Demystified',
       author: 'Bruce Greenwald',
-      summary: "Greenwald and his coauthor, Judd Kahn, offer an easy-to-follow method for understanding the competitive structure of your industry and developing an appropriate strategy for your specific position. Over the last two decades, the conventional approach to strategy has become frustratingly complex. It’s easy to get lost in a sophisticated model of your competitors, suppliers, buyers, substitutes, and other players, while losing sight of the big question: Are there barriers to entry that allow you to do things that other firms cannot?"
+      summary: "Greenwald and his coauthor, Judd Kahn, offer an easy-to-follow method for understanding the competitive structure of your industry and developing an appropriate strategy for your specific position. Over the last two decades, the conventional approach to strategy has become frustratingly complex. It\'s easy to get lost in a sophisticated model of your competitors, suppliers, buyers, substitutes, and other players, while losing sight of the big question: Are there barriers to entry that allow you to do things that other firms cannot?",
+      quote: 'A book that I have not read as yet - but cannot wait to start.'
     }, 
     {
       class: 'CommonStocksAnd',
       title: 'Common Stocks and Uncommon Profits and Other Writings',
       author: 'Philip Fisher',
-      summary: "This book is invaluable reading and has been since it was first published in 1958. The updated paperback retains the investment wisdom of the original edition and includes the perspectives of the author's son Ken Fisher, an investment guru in his own right in an expanded preface and introduction. 'I sought out Phil Fisher after reading his Common Stocks and Uncommon Profits...A thorough understanding of the business, obtained by using Phil's techniques...enables one to make intelligent investment commitments.' - Warren Buffet"
+      summary: 'Being Ken Fisher\'s son, Phil had big shoes to fill. His father Ken being a growth-focused investor, Phil\'s investment style is essentially a blended approach to marry growth and value. The biggest take-away being is that stocks should be held for the long run, even if they are overvalued, as long as you can be certain that its peak earning power hasn\'t passed.\n\
+      Fisher makes one interesting point about capex and depreciation and amortisation and the way this is accounted for. As capex is always spent in current currency value, but depreciation and amortisation is spent in historic currency value, which has a higher value than the simple accounting rules show them for.',
+      quote: 'Memorable quote: "This book is dedicated to all investors, large and small, who do NOT adhere to the philosophy: \'I have already made up my mind, don\'t confuse me with facts.\'"'
     }, 
     {
       class: 'PoorCharliesAlmanack',
       title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger",
       author: 'Charles T. Munger and Peter Kaufman',
-      summary: "Poor Charlie's Almanack contains the wit and wisdom of Charlie Munger: his talks, lectures and public commentary. And, it has been written and compiled with both Charlie Munger and Warren Buffett's encouragement and cooperation. Charlie's unique worldview, what he calls a 'multidisciplinary' approach, is a self-developed model for clear and simple thinking while being far from simplistic itself. Throughout the book, Charlie displays his intellect, wit, integrity, and rhetorical flair. Using his encyclopedic knowledge, he cites references from classical orators to eighteenth- and nineteenth-century European literati to pop culture icons of the moment while simultaneously reinforcing the virtues of lifelong learning and intellectual curiosity."
+      summary: 'I once tried to describe this book to a friend as a coffee table book. His reply was, when he\'d bought it: \'it\'s not a coffee table book, it\'s a coffee table.\'\n\
+      The book is based on the writings of Benjamin Franklin in his "Poor Richard\'s almanac", which was published from 1733 to 1758.  Clearly, Benjamin Franklin has had a profound impact on Charlie Munger and as Warren Buffett describes in his foreword: \"What Benjamin had recommended, Charlie demanded. If Benjamin suggested saving pennies, Charlie raised the stakes. If Benjamin said be prompt, Charlie said be early.\"\n\
+      This book is insightful not only in allowing the reader into the mind of Charlie Munger, but also for the extreme wisdom that is described through the various books recommended by Munger.\n\
+      The last part of the book, Ten Talks, deals with speeches that Munger has given and which are extremely interesting, although not always that easy, as they portray Munger\'s view into subjects like worldly wisdom, practical thought on practical thought, investment practices of leading charitable foundations and the psychology of human misjudgement.',
+      quote: 'Memorable quote: "When you mix raisins with turds, you\'ve still got turds."'
     }
   ]
   $scope.bookHovered = function(book) {
