@@ -448,7 +448,7 @@ app.controller('favoriteBooksCtrl', function($scope, $location) {
       summary: "Throughout history, rich and poor countries alike have been lending, borrowing, crashing--and recovering--their way through an extraordinary range of financial crises. Each time, the experts have chimed, 'this time is different'--claiming that the old rules of valuation no longer apply and that the new situation bears little similarity to past disasters. With this breakthrough study, leading economists Carmen Reinhart and Kenneth Rogoff definitively prove them wrong. Covering sixty-six countries across five continents, This Time Is Different presents a comprehensive look at the varieties of financial crises, and guides us through eight astonishing centuries of government defaults, banking panics, and inflationary spikes--from medieval currency debasements to today's subprime catastrophe."
     }, 
     {
-      class: 'ValueInvesting',
+      class: 'ValueInvesting1',
       title: 'Value Investing: From Graham to Buffett and Beyond',
       author: 'Bruce Greenwald',
       summary: "From the 'guru to Wall Street's gurus' comes the fundamental techniques of value investing and their applications. Bruce Greenwald is one of the leading authorities on value investing. Some of the savviest people on Wall Street have taken his Columbia Business School executive education course on the subject. Now this dynamic and popular teacher, with some colleagues, reveals the fundamental principles of value investing, the one investment technique that has proven itself consistently over time. After covering general techniques of value investing, the book proceeds to illustrate their applications through profiles of Warren Buffett, Michael Price, Mario Gabellio, and other successful value investors. A number of case studies highlight the techniques in practice."
@@ -502,7 +502,7 @@ app.controller('favoriteBooksCtrl', function($scope, $location) {
       summary: ""
     }, 
     {
-      class: 'ValueInvesting',
+      class: 'ValueInvesting2',
       title: 'Value Investing: Tools and Techniques for Intelligent Investment',
       author: 'James Montier',
       summary: ""
