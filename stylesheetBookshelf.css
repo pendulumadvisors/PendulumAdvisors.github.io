@@ -234,7 +234,9 @@
 	width: 5%;
 	height: auto;
 	float: left;
-	margin: -500px 0px 0px 50px;
+	margin: -100px 0px 0px 50px;
+	position: absolute;
+	z-index: 3;
 }
 @media (max-width: 640px) {
 	.listOfExternalResearch a {
@@ -271,7 +273,7 @@
 	width: 5%;
 	height: auto;
 	float: left;
-	margin: -500px 0px 0px 50px;
+	margin: -100px 0px 0px 50px;
 	position: relative;
 	z-index: 20px;
 }
