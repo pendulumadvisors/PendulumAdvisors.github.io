@@ -234,7 +234,12 @@
 	width: 5%;
 	height: auto;
 	float: left;
-	margin: 0px 0px 0px 50px;
+	margin: -700px 0px 0px 50px;
+}
+@media (max-width: 1279px) {
+	.externalresearch-return img {
+		margin: -500px 0px 0px 50px;
+	}
 }
 @media (max-width: 640px) {
 	.listOfExternalResearch a {
