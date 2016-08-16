@@ -86,16 +86,16 @@
 	padding-right: 10%;
 }
 .logo {
-	padding: 70px 0 60px 0;
+	padding: 70px 0 45px 0;
 	text-align: center;
-	width: 30%;
-	height: 40%;
+	width: 25%;
+	height: 35%;
 	display: block;
 	margin: 0 auto;
 }
 .aboutPA {
 	text-align: center;
-	margin: 0px 50px 0px 50px;
+	margin: 0px 49px 0px 49px;
 	font-size: 20px;
 	font-family: "Avenir Next";
 }
@@ -281,7 +281,8 @@
 /*-- Gallery --*/
 .gallery ul {
     padding:0 0 0 0;
-    margin:0 0 30px 0;
+    margin:28px 0 30px 0;
+    position: absolute;
 }
 .gallery ul li {
     list-style:none;
@@ -291,7 +292,8 @@
 	width: 5%;
 	height: auto;
 	float: left;
-	margin: 0px 0px 0px 50px;
+	margin: 550px 0px 0px 50px;
+	position: absolute;
 }
 
 /*-- Footer --*/
