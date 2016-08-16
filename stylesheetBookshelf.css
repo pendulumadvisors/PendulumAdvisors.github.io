@@ -221,7 +221,10 @@
 	font-family: "Avenir Next";
 }
 .listOfExternalResearch {
-	padding: 10% 0 0px 10%;
+	padding: 11% 0 0px 11%;
+}
+.listOfExternalResearch li {
+	list-style-type: none;
 }
 .listOfExternalResearch a {
 	font-size: 20px;
@@ -260,7 +263,7 @@
 	font-family: "Avenir Next";
 }
 .listOfPodcasts {
-	padding: 10% 0 0px 10%;
+	padding: 11% 0 0px 11%;
 }
 .listOfPodcasts a {
 	font-size: 20px;
@@ -273,7 +276,7 @@
 	width: 5%;
 	height: auto;
 	float: left;
-	margin: -100px 0px 0px 50px;
+	margin: -150px 0px 0px 50px;
 	position: relative;
 	z-index: 20px;
 }
@@ -615,7 +618,10 @@
 
 }
 .listOfArticles {
-	padding: 10% 0 0px 10%;
+	padding: 10% 0 0px 11%;
+}
+.listOfArticles li {
+	list-style-type: none;
 }
 .listOfArticles a {
 	font-size: 20px;
@@ -628,7 +634,7 @@
 	width: 5%;
 	height: auto;
 	float: left;
-	margin: 0px 0px 0px 50px;
+	margin: -150px 0px 0px 50px;
 }
 @media (max-width: 640px) {
 	.listOfArticles a {
