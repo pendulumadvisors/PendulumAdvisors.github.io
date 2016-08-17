@@ -191,7 +191,7 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
                   admin_id: $scope.currentUser.uid,
                   pdf_name: $scope.pdfInternalResearchName,
                   pdf_description: $scope.pdfInternalResearchDescription,
-                  pdf_image: downloadURL
+                  pdf_link: downloadURL
                });
 
                console.log("PDF added to storage");
@@ -200,93 +200,6 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
          // });
       });
    };
-
-   // $scope.uploadArticles = function() {
-   //    $scope.authObj = $firebaseAuth();
-   //    $scope.currentUser = $scope.authObj.$getAuth();
-
-   //    var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
-   //    $scope.currentUserData = $firebaseObject(userRef);
-   //    $scope.currentUserData.$loaded().then(function() {
-   //       var articlesRef = firebase.database().ref().child("favouriteArticles");
-   //       $scope.articles = $firebaseArray(articlesRef);
-   //       $scope.articles.$loaded().then(function() {
-   //          $scope.articles.$add({
-   //             admin_id: $scope.currentUser.uid,
-   //             article_name: $scope.articleName,
-   //             article_description: $scope.articleDescription,
-   //             article_url: $scope.article_url
-   //          });
-
-   //          console.log("Article added to database");
-   //          $window.location.href = "#/favoriteArticles";
-   //       });
-   //    });
-   // };
-
-   // $scope.uploadExternal = function() {
-   //    $scope.authObj = $firebaseAuth();
-   //    $scope.currentUser = $scope.authObj.$getAuth();
-   //    var file = document.getElementById("file-selector").files[0];
-   //    e = new FileReader();
-   //    console.log(file);
-   //    e.onloadend = function(event) {
-   //       var data = event.target.result;
-   //    }
-   //    e.readAsBinaryString(file);
-   //    var storageRef = firebase.storage().ref("pdfsExternalResearch/" + file.name);
-   //    var uploadTask = storageRef.put(file);
-   //    uploadTask.on("state_changed", function(snapshot) {
-
-   //    }, function(error) {
-
-   //    }, function() {
-   //       var downloadURL = uploadTask.snapshot.downloadURL;
-
-   //       var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
-   //       $scope.currentUserData = $firebaseObject(userRef);
-   //       $scope.currentUserData.$loaded().then(function() {
-   //          var pdfsExternalResearchRef = firebase.database().ref().child("pdfsExternalResearch");
-   //          $scope.pdfsExternalResearch = $firebaseArray(pdfsExternalResearchRef);
-   //          $scope.pdfsExternalResearch.$loaded().then(function() {
-   //             $scope.pdfsExternalResearch.$add({
-   //                admin_id: $scope.currentUser.uid,
-   //                pdf_name: $scope.pdfExternalResearchName,
-   //                pdf_description: $scope.pdfExternalResearchDescription,
-   //                pdf_image: downloadURL
-   //             });
-
-   //             console.log("PDF added to storage");
-   //             $window.location.href = "#/ExternalResearch";
-   //          });
-   //       });
-   //    });
-   // };
-   
-   // $scope.uploadPodcasts = function() {
-   //    $scope.authObj = $firebaseAuth();
-   //    $scope.currentUser = $scope.authObj.$getAuth();
-
-   //    var downloadURL = uploadTask.snapshot.downloadURL;
-
-   //    var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
-   //    $scope.currentUserData = $firebaseObject(userRef);
-   //    $scope.currentUserData.$loaded().then(function() {
-   //       var pdfsRef = firebase.database().ref().child("Podcasts");
-   //       $scope.pdfs = $firebaseArray(pdfsRef);
-   //       $scope.pdfs.$loaded().then(function() {
-   //          $scope.pdfs.$add({
-   //             admin_id: $scope.currentUser.uid,
-   //             pdf_name: $scope.pdfName,
-   //             pdf_description: $scope.pdfDescription,
-   //             pdf_image: downloadURL
-   //          });
-
-   //          console.log("PDF added to storage");
-   //          $window.location.href = "#/ExternalResearch";
-   //       });
-   //    });
-   // };
 });
 
 
