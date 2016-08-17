@@ -174,13 +174,35 @@
 		font-size: 25px;
 	}
 }
+.heading h1 {
+	font-size: 50px;
+	font-weight: normal;
+	color: black;
+	background-color: white;
+	opacity: 0.7;
+	position: absolute;
+	z-index: 2;
+	margin-top: 80px;
+	padding-left: 60px;
+	padding-right: 20px;
+}
+@media (max-width: 845px) {
+	.heading h1 {
+		font-size: 35px;
+	}
+}
+@media (max-width: 640px) {
+	.heading h1 {
+		font-size: 25px;
+	}
+}
+.InternalResearchList {
+	padding-top: 120px;
+}
 .InternalResearchBackground {
 	width: 100vw;
 	height: 100vh;
 	font-family: "Avenir Next";
-}
-.InternalResearchList {
-	padding-top: 100px;
 }
 .browse-list-right {
 	padding: 5px 0 5px 150px;
@@ -192,6 +214,99 @@
 }
 .browse-list-right p {
 	font-size: 15px;
+}
+/* Scroll Button */
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+.demo2 a {
+	position: absolute;
+	bottom: 220px;
+	left: 45%;
+	z-index: 2;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	color: #fff;
+	font : normal 400 20px/1 'Avenir Next';
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	text-decoration: none;
+	transition: opacity .3s;
+}
+.demo2 a:hover {
+	opacity: .5;
+}
+#section032 a {
+	padding-top: 60px;
+}
+#section032 a span {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 46px;
+	height: 46px;
+	margin-left: -23px;
+	border: 1px solid #fff;
+	border-radius: 100%;
+	box-sizing: border-box;
+}
+#section032 a span::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	content: '';
+	width: 16px;
+	height: 16px;
+	margin: -12px 0 0 -8px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	box-sizing: border-box;
+}
+#section032 a span::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	content: '';
+	width: 44px;
+	height: 44px;
+	box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+	border-radius: 100%;
+	opacity: 0;
+	-webkit-animation: sdb03 3s infinite;
+	animation: sdb03 3s infinite;
+	box-sizing: border-box;
+}
+@-webkit-keyframes sdb03 {
+	0% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 1;
+	}
+	60% {
+		box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes sdb03 {
+	0% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 1;
+	}
+	60% {
+		box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
 /*-- External Research --*/
