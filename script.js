@@ -69,7 +69,6 @@ app.config(function($routeProvider, $locationProvider) {
 		templateUrl: 'templates/favoriteBooks.html'
 	});
 	$routeProvider.when('/favoriteArticles', {
-    controller: 'ArticlesCtrl',
 		templateUrl: 'templates/favoriteArticles.html'
 	});
 });
@@ -516,16 +515,6 @@ app.controller('favoriteBooksCtrl', function($scope, $location) {
   }
 
 });
-
-
-/* -- Controller for Articles page -- */
-app.controller('ArticlesCtrl', function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location) {
-
-   var articlesRef = firebase.database().ref().child("favouriteArticles");
-      $scope.articles = $firebaseArray(articlesRef);
-
-});
-
 
 /* -- -- */
 app.controller("SignupCtrl", function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $window) {
