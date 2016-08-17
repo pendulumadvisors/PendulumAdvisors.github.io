@@ -265,9 +265,10 @@
 .listOfPodcasts {
 	padding: 11% 0 0px 11%;
 }
-.listOfPodcasts a {
+.listOfPodcasts h1 {
 	font-size: 20px;
 	color: #d84727;
+	font-weight: normal;
 }
 .listOfPodcasts p {
 	padding-bottom: 15px;
