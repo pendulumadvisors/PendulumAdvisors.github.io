@@ -85,8 +85,11 @@
 	padding-left: 10%;
 	padding-right: 10%;
 }
+.aboutRow h4{
+	color: white;
+}
 .logo {
-	padding: 70px 0 45px 0;
+	padding: 50px 0 45px 0;
 	text-align: center;
 	width: 25%;
 	height: 35%;
