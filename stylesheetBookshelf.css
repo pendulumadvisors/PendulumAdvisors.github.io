@@ -152,25 +152,9 @@
 	/*background: url(/images/opensafe.jpg) no-repeat center center;
 	background-size: cover;*/
 }
-.opensafe h1 {
-	color: black;
-	text-align: center;
-	font-family: "Avenir Next";
-	text-transform: uppercase;
-	/*font-size: 50px;*/
-	font-weight: normal;
-}
-.InternalResearchBackground {
-	background: url(/images/woodpanel.jpg);
-	background-size: cover;
-	width: 100%;
-	height: 100vh;
-}
 .heading p {
-	font-family: "Avenir Next";
 	font-size: 50px;
 	font-weight: normal;
-	/*text-transform: uppercase;*/
 	color: black;
 	background-color: white;
 	opacity: 0.7;
@@ -190,28 +174,24 @@
 		font-size: 25px;
 	}
 }
+.InternalResearchBackground {
+	width: 100vw;
+	height: 100vh;
+	font-family: "Avenir Next";
+}
 .InternalResearchList {
-	padding-top: 110px;
+	padding-top: 100px;
 }
 .browse-list-right {
-	font-family: "Avenir Next";
-	font-size: 19px;
-	font-weight: normal;
-	text-align: center;
-	padding: 5px 0 5px 0;
-	margin: 0px auto;
-	background-color: white;
-	opacity: 0.8;
+	padding: 5px 0 5px 150px;
 }
-.browse-list button {
-	background-color: #d84727;
+.browse-list-right a {
 	font-family: "Avenir Next";
+	font-size: 20px;
+	color: #d84727;
+}
+.browse-list-right p {
 	font-size: 15px;
-	font-weight: 100;
-	text-transform: uppercase;
-}
-.browse-list a {
-	color: white;
 }
 
 /*-- External Research --*/
@@ -616,7 +596,7 @@
 
 /*-- Favorite Articles --*/
 .ArticlesBackground {
-
+	font-family: "Avenir Next";
 }
 .listOfArticles {
 	padding: 10% 0 0px 11%;

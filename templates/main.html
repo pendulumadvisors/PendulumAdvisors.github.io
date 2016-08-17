@@ -32,10 +32,13 @@
 	<div class="row">
 		<div class="opensafe">
 			<img class="opensafe" src="/images/newopensafe.png">
+			<section id="section03" class="demo">
+				<a ng-click="gotoElement('InternalResearchList')"><span></span></a>
+			</section>
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row" id="InternalResearchList">
 		<div class="InternalResearchBackground">
 			<div class="heading">
 				<p>Internal Research</p>
@@ -45,9 +48,8 @@
 				<div class="browse-list" ng-repeat="pdf in pdfsInternalResearch track by $index">
 					<div class="row">
 						<div class="browse-list-right">
-							{{ pdf.pdf_name }} <button><a href="{{ pdf.pdf_link }}"> Click to open </a></button>
-							<!-- <h5><strong>PDF Description</strong></h5>
-							<p>{{ pdf.pdf_description }}</p> -->
+							<h3><a href="{{ pdf.pdf_link }}"> {{ pdf.pdf_name }} </a></h3> 
+							<p>{{ pdf.pdf_description }}</p>
 						</div>
 					</div>
 				</div>

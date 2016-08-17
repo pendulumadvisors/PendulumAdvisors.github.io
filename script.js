@@ -204,7 +204,7 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
 
 
 /* -- Controller for main.html (for clients)-- */
-app.controller('MainCtrl', function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location) {
+app.controller('MainCtrl', function($scope, $firebaseAuth, $firebaseObject, $firebaseArray, $location, anchorSmoothScroll) {
     var auth = $firebaseAuth();
     $scope.logout = function() {
     	auth.$signOut();
@@ -218,6 +218,15 @@ app.controller('MainCtrl', function($scope, $firebaseAuth, $firebaseObject, $fir
    //    $scope.currentUserData = $firebaseObject(userRef);
    var pdfsInternalResearchRef = firebase.database().ref().child("pdfsInternalResearch");
       $scope.pdfsInternalResearch = $firebaseArray(pdfsInternalResearchRef);
+
+  $scope.gotoElement = function (eID){
+      // set the location.hash to the id of
+      // the element you wish to scroll to.
+      $location.hash('bottom');
+ 
+      // call $anchorScroll()
+      anchorSmoothScroll.scrollTo(eID);
+    };
 });
 
 
