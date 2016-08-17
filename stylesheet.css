@@ -85,7 +85,7 @@
 	padding-left: 10%;
 	padding-right: 10%;
 }
-.aboutRow h4{
+.aboutRow h4 {
 	color: white;
 }
 .logo {
@@ -142,7 +142,7 @@
 	text-transform: uppercase;
 }
 .Gerard {
-	margin-top: 10px;
+	margin-top: 20px;
 }
 .Gerard span p {
 	margin-bottom: 80px;
