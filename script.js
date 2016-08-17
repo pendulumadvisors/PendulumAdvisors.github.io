@@ -162,44 +162,44 @@ app.controller('LoginCtrl', function($scope, $firebaseObject, $firebaseAuth, $fi
 /* -- Controller for adminPage.html -- */
 app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $firebaseObject, $firebaseArray, $window) {
    
-   $scope.uploadInternal = function() {
-      $scope.authObj = $firebaseAuth();
-      $scope.currentUser = $scope.authObj.$getAuth();
-      var file = document.getElementById("file-selector").files[0];
-      r = new FileReader();
-      console.log(file);
-      r.onloadend = function(event) {
-         var data = event.target.result;
-      }
-      r.readAsBinaryString(file);
-      var storageRef = firebase.storage().ref("pdfsInternalResearch/" + file.name);
-      var uploadTask = storageRef.put(file);
-      uploadTask.on("state_changed", function(snapshot) {
+   // $scope.uploadInternal = function() {
+   //    $scope.authObj = $firebaseAuth();
+   //    $scope.currentUser = $scope.authObj.$getAuth();
+   //    var file = document.getElementById("file-selector").files[0];
+   //    r = new FileReader();
+   //    console.log(file);
+   //    r.onloadend = function(event) {
+   //       var data = event.target.result;
+   //    }
+   //    r.readAsBinaryString(file);
+   //    var storageRef = firebase.storage().ref("pdfsInternalResearch/" + file.name);
+   //    var uploadTask = storageRef.put(file);
+   //    uploadTask.on("state_changed", function(snapshot) {
 
-      }, function(error) {
+   //    }, function(error) {
 
-      }, function() {
-         var downloadURL = uploadTask.snapshot.downloadURL;
+   //    }, function() {
+   //       var downloadURL = uploadTask.snapshot.downloadURL;
 
-         // var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
-         // $scope.currentUserData = $firebaseObject(userRef);
-         // $scope.currentUserData.$loaded().then(function() {
-            var pdfsInternalResearchRef = firebase.database().ref().child("pdfsInternalResearch");
-            $scope.pdfsInternalResearch = $firebaseArray(pdfsInternalResearchRef);
-            $scope.pdfsInternalResearch.$loaded().then(function() {
-               $scope.pdfsInternalResearch.$add({
-                  admin_id: $scope.currentUser.uid,
-                  pdf_name: $scope.pdfInternalResearchName,
-                  pdf_description: $scope.pdfInternalResearchDescription,
-                  pdf_link: downloadURL
-               });
+   //       // var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
+   //       // $scope.currentUserData = $firebaseObject(userRef);
+   //       // $scope.currentUserData.$loaded().then(function() {
+   //          var pdfsInternalResearchRef = firebase.database().ref().child("pdfsInternalResearch");
+   //          $scope.pdfsInternalResearch = $firebaseArray(pdfsInternalResearchRef);
+   //          $scope.pdfsInternalResearch.$loaded().then(function() {
+   //             $scope.pdfsInternalResearch.$add({
+   //                admin_id: $scope.currentUser.uid,
+   //                pdf_name: $scope.pdfInternalResearchName,
+   //                pdf_description: $scope.pdfInternalResearchDescription,
+   //                pdf_link: downloadURL
+   //             });
 
-               console.log("PDF added to storage");
-               $window.location.href = "#/main";
-            });
-         // });
-      });
-   };
+   //             console.log("PDF added to storage");
+   //             $window.location.href = "#/main";
+   //          });
+   //       // });
+   //    });
+   // };
 });
 
 
