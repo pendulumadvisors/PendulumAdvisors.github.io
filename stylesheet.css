@@ -89,7 +89,7 @@
 	color: white;
 }
 .logo {
-	padding: 50px 0 45px 0;
+	padding: 100px 0 45px 0;
 	text-align: center;
 	width: 25%;
 	height: 35%;
@@ -121,7 +121,7 @@
 
 /*-- Our Team --*/
 .ourTeam h1 {
-	padding-top: 70px;
+	padding-top: 100px;
 	padding-bottom: 40px;
 	/*text-align: center;*/
 	font-family: "Avenir Next";
@@ -142,7 +142,7 @@
 	text-transform: uppercase;
 }
 .Gerard {
-	margin-top: 20px;
+	margin-top: 50px;
 }
 .Gerard span p {
 	margin-bottom: 80px;
