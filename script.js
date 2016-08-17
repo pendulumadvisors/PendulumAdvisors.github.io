@@ -201,28 +201,28 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
       });
    };
 
-   $scope.uploadArticles = function() {
-      $scope.authObj = $firebaseAuth();
-      $scope.currentUser = $scope.authObj.$getAuth();
+   // $scope.uploadArticles = function() {
+   //    $scope.authObj = $firebaseAuth();
+   //    $scope.currentUser = $scope.authObj.$getAuth();
 
-      var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
-      $scope.currentUserData = $firebaseObject(userRef);
-      $scope.currentUserData.$loaded().then(function() {
-         var articlesRef = firebase.database().ref().child("favouriteArticles");
-         $scope.articles = $firebaseArray(articlesRef);
-         $scope.articles.$loaded().then(function() {
-            $scope.articles.$add({
-               admin_id: $scope.currentUser.uid,
-               article_name: $scope.articleName,
-               article_description: $scope.articleDescription,
-               article_url: $scope.article_url
-            });
+   //    var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
+   //    $scope.currentUserData = $firebaseObject(userRef);
+   //    $scope.currentUserData.$loaded().then(function() {
+   //       var articlesRef = firebase.database().ref().child("favouriteArticles");
+   //       $scope.articles = $firebaseArray(articlesRef);
+   //       $scope.articles.$loaded().then(function() {
+   //          $scope.articles.$add({
+   //             admin_id: $scope.currentUser.uid,
+   //             article_name: $scope.articleName,
+   //             article_description: $scope.articleDescription,
+   //             article_url: $scope.article_url
+   //          });
 
-            console.log("Article added to database");
-            $window.location.href = "#/favoriteArticles";
-         });
-      });
-   };
+   //          console.log("Article added to database");
+   //          $window.location.href = "#/favoriteArticles";
+   //       });
+   //    });
+   // };
 
    // $scope.uploadExternal = function() {
    //    $scope.authObj = $firebaseAuth();
