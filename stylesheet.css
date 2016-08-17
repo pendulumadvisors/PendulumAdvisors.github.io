@@ -302,7 +302,7 @@
 /*-- Footer --*/
 .footer {
 	background: url(/images/woodpanelcopy.jpg) no-repeat center center;
-	height: 250px;
+	height: 270px;
 	background-size: cover;
 	text-align: center;
 	border-top: 1pt solid #ddd;
@@ -311,7 +311,7 @@
 .footer .col-md-12 {
 	margin: 0px auto;
 	display: block;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.4);
 	width: 100%;
 	height: 100%;
 }
