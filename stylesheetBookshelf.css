@@ -153,6 +153,7 @@
 	background-size: cover;*/
 }
 .heading p {
+	font-family: "Avenir Next";
 	font-size: 50px;
 	font-weight: normal;
 	color: black;
@@ -372,7 +373,7 @@
 	width: 5%;
 	height: auto;
 	float: left;
-	margin: -150px 0px 0px 50px;
+	margin: -650px 0px 0px 50px;
 	position: relative;
 	z-index: 20px;
 }
@@ -730,7 +731,7 @@
 	width: 5%;
 	height: auto;
 	float: left;
-	margin: -150px 0px 0px 50px;
+	margin: -350px 0px 0px 50px;
 }
 @media (max-width: 640px) {
 	.listOfArticles a {
