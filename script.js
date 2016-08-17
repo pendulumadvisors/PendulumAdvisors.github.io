@@ -181,9 +181,9 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
       }, function() {
          var downloadURL = uploadTask.snapshot.downloadURL;
 
-         var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
-         $scope.currentUserData = $firebaseObject(userRef);
-         $scope.currentUserData.$loaded().then(function() {
+         // var userRef = firebase.database().ref().child("users").child($scope.currentUser.uid);
+         // $scope.currentUserData = $firebaseObject(userRef);
+         // $scope.currentUserData.$loaded().then(function() {
             var pdfsInternalResearchRef = firebase.database().ref().child("pdfsInternalResearch");
             $scope.pdfsInternalResearch = $firebaseArray(pdfsInternalResearchRef);
             $scope.pdfsInternalResearch.$loaded().then(function() {
@@ -197,7 +197,7 @@ app.controller("AdminCtrl", function($scope, $firebaseAuth, $routeParams, $fireb
                console.log("PDF added to storage");
                $window.location.href = "#/main";
             });
-         });
+         // });
       });
    };
 
